@@ -1,0 +1,76 @@
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.vbprojAssemblyReference.cache
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.frmSelectRecord.resources
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.Resources.resources
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.vbproj.GenerateResource.cache
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.vbproj.CoreCompileInputs.cache
+C:\VB_Projects\Pharmacy\Pharmacy\bin\Debug\Pharmacy.exe.config
+C:\VB_Projects\Pharmacy\Pharmacy\bin\Debug\Pharmacy.exe
+C:\VB_Projects\Pharmacy\Pharmacy\bin\Debug\Pharmacy.pdb
+C:\VB_Projects\Pharmacy\Pharmacy\bin\Debug\Pharmacy.xml
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.exe
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.xml
+C:\VB_Projects\Pharmacy\Pharmacy\obj\Debug\Pharmacy.pdb
+C:\VB_Projects\Pharmacy\bin\Debug\Pharmacy.exe.config
+C:\VB_Projects\Pharmacy\bin\Debug\Pharmacy.exe
+C:\VB_Projects\Pharmacy\bin\Debug\Pharmacy.pdb
+C:\VB_Projects\Pharmacy\bin\Debug\Pharmacy.xml
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.vbprojAssemblyReference.cache
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.frmSelectRecord.resources
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.Resources.resources
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.vbproj.GenerateResource.cache
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.vbproj.CoreCompileInputs.cache
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.exe
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.xml
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.pdb
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.frmViewPrescriptions.resources
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.frmUpdatePrescription.resources
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.exe.config
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.exe
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.pdb
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.xml
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbprojAssemblyReference.cache
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmSelectRecord.resources
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmUpdatePrescription.resources
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmViewPrescriptions.resources
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.Resources.resources
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbproj.GenerateResource.cache
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbproj.CoreCompileInputs.cache
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.exe
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.xml
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.pdb
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmPersonalInfo.resources
+C:\Users\bclo\Downloads\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmPrescription.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.exe.config
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.exe
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.pdb
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.xml
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbprojAssemblyReference.cache
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmPersonalInfo.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmPrescription.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmSelectRecord.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmUpdatePrescription.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmViewPrescriptions.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.Resources.resources
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbproj.GenerateResource.cache
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbproj.CoreCompileInputs.cache
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.exe
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.xml
+C:\Users\jpzearfoss\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.pdb
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.exe.config
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.exe
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.pdb
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\bin\Debug\Pharmacy.xml
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbprojAssemblyReference.cache
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmPersonalInfo.resources
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmPrescription.resources
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmSelectRecord.resources
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmUpdatePrescription.resources
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.frmViewPrescriptions.resources
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.Resources.resources
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbproj.GenerateResource.cache
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.vbproj.CoreCompileInputs.cache
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.exe
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.xml
+C:\Users\Nicholas's Laptop\Downloads\JoshFinalProject\JoshFinalProject\Pharmacy\obj\Debug\Pharmacy.pdb
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.frmPersonalInfo.resources
+C:\VB_Projects\Pharmacy\obj\Debug\Pharmacy.frmPrescription.resources
