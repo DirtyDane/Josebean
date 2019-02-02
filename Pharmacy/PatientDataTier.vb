@@ -7,6 +7,7 @@ Imports System.Collections.Generic
 
 
 
+'testo
 
 Public Class PatientDataTier
     Dim connString As New SqlClient.SqlConnection("server=CNSA-SOPH20;initial catalog=XYZ;connect timeout=30;integrated security=SSPI")
