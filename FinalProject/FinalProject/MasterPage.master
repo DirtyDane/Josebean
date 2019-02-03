@@ -1,0 +1,71 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style>
+        body {
+            background-image:url("back.jpg");
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #111;
+}
+
+li {
+  text-align:center;
+  display: inline;
+}
+
+li a {
+  display: block;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #09367B;
+}
+    </style>
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <!-- This is where any additional style will go, as well as different titles, and anything else befitting the  -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+     <form id="form1" runat="server">
+        <div class="wrapper">
+            <div class="menubar">
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="#">Patients</a></li>
+                    <li><a href="#">Physicians</a></li>
+                    <li><a href="#">Perscriptions</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <!-- This is where all body content, including divs, PTags, etc will go -->
+                <asp:ContentPlaceHolder ID="LeftSideBar" runat="server">
+
+                </asp:ContentPlaceHolder>    
+                
+                <asp:ContentPlaceHolder id="body" runat="server">
+
+                    </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    
+    </form>
+</body>
+</html>
