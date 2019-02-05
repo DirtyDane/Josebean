@@ -1,56 +1,8 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" StylesheetTheme="Theme1" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 97%;
-        }
-        .auto-style3 {
-            width: 137px;
-        }
-        .auto-style6 {
-            width: 137px;
-            height: 26px;
-        }
-        .auto-style9 {
-            width: 111px;
-        }
-        .auto-style10 {
-            width: 111px;
-            height: 26px;
-        }
-        .auto-style12 {
-            width: 66px;
-            height: 26px;
-        }
-        .auto-style13 {
-            margin-left: 40px;
-        }
-        .auto-style16 {
-            width: 66px;
-        }
-        .auto-style18 {
-            height: 26px;
-            width: 10px;
-        }
-        .auto-style19 {
-            width: 1px;
-        }
-        .auto-style20 {
-            width: 1px;
-            height: 26px;
-        }
-        .auto-style21 {
-            width: 10px;
-        }
-    </style>
-</head>
-<body style="width: 475px; height: 270px">
-    <form id="form1" runat="server">
+<asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
+    <div class="pagemid"> 
+    
         <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
@@ -158,7 +110,7 @@
                 <td class="auto-style9">&nbsp;</td>
                 <td colspan="3">
                     <asp:Button ID="btnAddPhysician" runat="server" BorderStyle="Outset" Text="Add  Patient" Width="100px" />
-                    <asp:Button ID="btnClear" runat="server" BorderStyle="Inset" Text="Clear" Width="100px" />
+                    <asp:Button ID="btnClear" runat="server" BorderStyle="Outset" Text="Clear" Width="100px" />
                     <asp:Button ID="btnExit" runat="server" BorderStyle="Outset" Text="Exit" Width="100px" />
                 </td>
                 <td class="auto-style19">&nbsp;</td>
@@ -172,6 +124,6 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-    </form>
-</body>
-</html>
+    
+        </div>
+</asp:Content>
