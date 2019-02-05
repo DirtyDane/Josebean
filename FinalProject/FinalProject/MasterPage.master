@@ -49,7 +49,7 @@ li a:hover {
                     <li><a href="Default.aspx">Home</a></li>
                     <li><a href="#">Patients</a></li>
                     <li><a href="#">Physicians</a></li>
-                    <li><a href="#">Perscriptions</a></li>
+                    <li><a href="#">Prescriptions</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
