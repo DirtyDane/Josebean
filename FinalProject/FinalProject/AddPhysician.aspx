@@ -68,7 +68,7 @@
                     <asp:Label ID="lblDOB" runat="server" Text="Date of Birth"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtDOB" runat="server">__/__/____</asp:TextBox>
+                    <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblState" runat="server" Text="State"></asp:Label>
@@ -109,7 +109,7 @@
                 <td colspan="3">
                     <asp:Button ID="btnAddPhysician" runat="server" BorderStyle="Ridge" Text="Add  Physisican" Width="114px" />
                     <asp:Button ID="btnClear" runat="server" BorderStyle="Ridge" Text="Clear" Width="100px" CausesValidation="False" />
-                    <asp:Button ID="btnExit" runat="server" BorderStyle="Ridge" Text="Exit" Width="100px" />
+                    <asp:Button ID="btnExit" runat="server" BorderStyle="Ridge" Text="Exit" Width="100px" CausesValidation="False" />
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
@@ -118,7 +118,9 @@
                 <td colspan="2">
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
                 </td>
-                <td class="auto-style21">&nbsp;</td>
+                <td class="auto-style21">
+                    <asp:Label ID="lblSuccess" runat="server" Text="Success" Visible="False"></asp:Label>
+                </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
