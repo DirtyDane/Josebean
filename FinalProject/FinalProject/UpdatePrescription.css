@@ -1,0 +1,42 @@
+﻿#txtPrescriptNo {
+    width: 150px;
+    margin-left: 7px;
+}
+
+#txtPatient {
+    width: 150px;
+    margin-left: 22px;
+}
+
+#txtPhysician {
+    width: 150px;
+    margin-left: 5px;
+}
+
+#ddlMedication {
+    width: 150px;
+    margin-left: 35px;
+}
+
+#txtRefills {
+    width: 150px;
+    margin-left: 53px;
+}
+
+#ddlDosage {
+    width: 150px;
+    margin-left: 45px;
+}
+
+#ddlIntakeMethod {
+    width: 150px;
+}
+
+#ddlFrequency {
+    width: 150px;
+    margin-left: 35px;
+}
+
+
+body {
+}

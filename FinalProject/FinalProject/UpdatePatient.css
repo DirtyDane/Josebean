@@ -1,0 +1,62 @@
+﻿#txtPatientID {
+    width: 150px;
+    margin-left: 26px;
+}
+
+#txtCPhone {
+    width: 150px;
+    margin-left: 8px;
+}
+
+#txtFName {
+    width: 150px;
+    margin-left: 21px;
+}
+
+#lbGender {
+    width: 150px;
+    margin-left: 28px;
+}
+
+#txtMiddle {
+    width: 150px;
+    margin-left: 5px ;
+}
+
+#txtAddress {
+    width: 150px;
+    margin-left: 24px;
+}
+
+#txtLName {
+    width: 150px;
+    margin-left: 23px;
+}
+
+#txtCity {
+    width: 150px;
+    margin-left:50px;
+}
+
+#txtDOB {
+    width: 150px;
+    margin-left: 10px;
+}
+
+#lbState {
+    width: 150px;
+    margin-left: 42px;
+}
+
+#txtHPhone {
+    width: 150px;
+    margin-left: 13px;
+}
+
+#txtZip {
+    width: 150px;
+    margin-left: 55px;
+}
+
+body {
+}
