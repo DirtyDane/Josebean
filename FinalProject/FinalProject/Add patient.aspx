@@ -118,7 +118,7 @@
                     <asp:RequiredFieldValidator ID="valDOB" runat="server" ControlToValidate="txtDOB" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtDOB" runat="server">__/__/____</asp:TextBox>
+                    <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblState" runat="server" Text="State"></asp:Label>
@@ -133,13 +133,13 @@
                     <asp:Label ID="lblHmPn" runat="server" Text="Home Phone"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtHmPn" runat="server">(___)___-____</asp:TextBox>
+                    <asp:TextBox ID="txtHmPn" runat="server" TextMode="Phone"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblZip" runat="server" Text="Zip"></asp:Label>
                 </td>
                 <td class="auto-style21">
-                    <asp:TextBox ID="txtZip" runat="server">_____</asp:TextBox>
+                    <asp:TextBox ID="txtZip" runat="server" TextMode="Number"></asp:TextBox>
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
@@ -148,7 +148,7 @@
                     <asp:Label ID="lblCell" runat="server" Text="Cell Phone"></asp:Label>
                 </td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="txtCell" runat="server">(___)___-____</asp:TextBox>
+                    <asp:TextBox ID="txtCell" runat="server" TextMode="Phone"></asp:TextBox>
                 </td>
                 <td class="auto-style12"></td>
                 <td class="auto-style18"></td>
