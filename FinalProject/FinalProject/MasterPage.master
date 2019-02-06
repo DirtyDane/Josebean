@@ -36,20 +36,6 @@ li a:hover {
   background-color: #09367B;
 }
 
-.Login {
-    
-    position:absolute;
-    right:10px;
-    padding-bottom:50px;
-}
-
-.Login2 {
-    background-color:whitesmoke;
-     position:absolute;
-    right:10px;
-    padding-bottom:50px;
-}
-
 .wrapper {
     padding-top:125px;
 }
