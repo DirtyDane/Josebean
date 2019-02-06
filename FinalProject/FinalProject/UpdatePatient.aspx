@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="UpdatePatient.aspx.vb" Inherits="UpdatePatient" %>
 
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 
 <!DOCTYPE html>
 <link href="UpdatePatient.css" rel="stylesheet" />
@@ -11,7 +11,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
             <h1 align="center">Update Patient Information</h1>
 
             <table align="center">
@@ -27,7 +26,11 @@
                     <td>
                         <b>First Name:</b> &nbsp; <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>Gender:</b> &nbsp; <asp:ListBox ID="lbGender" runat="server" Height="22px" Width="123px"></asp:ListBox>
+                        <b>Gender:</b> &nbsp; <asp:ListBox ID="lbGender" runat="server" Height="22px" Width="123px" SelectionMode="Multiple">
+                            <asp:ListItem Selected="True">Select Gender</asp:ListItem>
+                            <asp:ListItem>Male</asp:ListItem>
+                            <asp:ListItem>Female</asp:ListItem>
+                        </asp:ListBox>
                     </td>
                 </tr>
                 <tr>
@@ -48,17 +51,80 @@
                     <td>
                         <b>Date of Birth:</b> &nbsp; <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>State:</b> &nbsp; <asp:ListBox ID="lbState" runat="server" Height="22px" Width="150px"></asp:ListBox>
+                        <b>State:</b> &nbsp; <asp:ListBox ID="lbState" runat="server" Height="22px" Width="150px">
+                            <asp:ListItem Selected="True">Select State</asp:ListItem>
+                            <asp:ListItem>Alabama</asp:ListItem>
+                            <asp:ListItem>Alaska</asp:ListItem>
+                            <asp:ListItem>Arizona</asp:ListItem>
+                            <asp:ListItem>Arkansas</asp:ListItem>
+                            <asp:ListItem>California</asp:ListItem>
+                            <asp:ListItem>Colorado</asp:ListItem>
+                            <asp:ListItem>Connecticut</asp:ListItem>
+                            <asp:ListItem>Delaware</asp:ListItem>
+                            <asp:ListItem>Flordia</asp:ListItem>
+                            <asp:ListItem>Georgia</asp:ListItem>
+                            <asp:ListItem>Hawaii</asp:ListItem>
+                            <asp:ListItem>Idaho</asp:ListItem>
+                            <asp:ListItem>Illinois</asp:ListItem>
+                            <asp:ListItem>Indiana</asp:ListItem>
+                            <asp:ListItem>Iowa</asp:ListItem>
+                            <asp:ListItem>Kansas </asp:ListItem>
+                            <asp:ListItem>Kentucky</asp:ListItem>
+                            <asp:ListItem>Louisiana </asp:ListItem>
+                            <asp:ListItem>Maine </asp:ListItem>
+                            <asp:ListItem>Maryland</asp:ListItem>
+                            <asp:ListItem>Massachusetts </asp:ListItem>
+                            <asp:ListItem>Michigan</asp:ListItem>
+                            <asp:ListItem>Minnesota </asp:ListItem>
+                            <asp:ListItem>Mississippi </asp:ListItem>
+                            <asp:ListItem>Missouri</asp:ListItem>
+                            <asp:ListItem>Montana</asp:ListItem>
+                            <asp:ListItem>Nebraska</asp:ListItem>
+                            <asp:ListItem>Nevada</asp:ListItem>
+                            <asp:ListItem>New Hampshire</asp:ListItem>
+                            <asp:ListItem>New Jersey </asp:ListItem>
+                            <asp:ListItem>New Mexico</asp:ListItem>
+                            <asp:ListItem>New York </asp:ListItem>
+                            <asp:ListItem>North Carolina </asp:ListItem>
+                            <asp:ListItem>North Dakota</asp:ListItem>
+                            <asp:ListItem>Ohio</asp:ListItem>
+                            <asp:ListItem>Oklahoma</asp:ListItem>
+                            <asp:ListItem>Oregon</asp:ListItem>
+                            <asp:ListItem>Pennsylvania</asp:ListItem>
+                            <asp:ListItem>Rhode Island</asp:ListItem>
+                            <asp:ListItem>South Carolina</asp:ListItem>
+                            <asp:ListItem>South Dakota</asp:ListItem>
+                            <asp:ListItem>Tennessee</asp:ListItem>
+                            <asp:ListItem>Texas</asp:ListItem>
+                            <asp:ListItem>Utah</asp:ListItem>
+                            <asp:ListItem>Vermont </asp:ListItem>
+                            <asp:ListItem>Virginia</asp:ListItem>
+                            <asp:ListItem>Washington </asp:ListItem>
+                            <asp:ListItem>West Virginia </asp:ListItem>
+                            <asp:ListItem>Wisconsin</asp:ListItem>
+                            <asp:ListItem>Wyoming</asp:ListItem>
+                        </asp:ListBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Home Phone:</b> &nbsp; <asp:TextBox ID="txtHPhone" runat="server"></asp:TextBox>
+                        <b>Home Phone:</b> &nbsp; <asp:TextBox ID="txtHPhone" runat="server" TextMode="Phone"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <b>Zip:</b> &nbsp; <asp:TextBox ID="txtZip" runat="server" TextMode="Number"></asp:TextBox>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="btnUpdate" runat="server" Text="Update" Width="20%" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="20%" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnExit" runat="server" Text="Exit" Width="20%" />
+                    </td>
+                </tr>
+              
             </table>
+
 
 
         </div>
