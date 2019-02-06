@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -33,6 +35,28 @@ li a {
 li a:hover {
   background-color: #09367B;
 }
+
+.Login {
+    
+    position:absolute;
+    right:10px;
+    padding-bottom:50px;
+}
+
+.Login2 {
+    background-color:whitesmoke;
+     position:absolute;
+    right:10px;
+    padding-bottom:50px;
+}
+
+.wrapper {
+    padding-top:125px;
+}
+
+.content {
+    padding-left:15%;
+}
     </style>
     <title>
         <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
@@ -43,6 +67,7 @@ li a:hover {
     </head>
 <body>
      <form id="form1" runat="server">
+        
         <div class="wrapper">
             <div class="menubar">
                 <ul>
@@ -60,7 +85,7 @@ li a:hover {
 
                 </asp:ContentPlaceHolder>    
                 
-                <asp:ContentPlaceHolder id="body" runat="server">
+                <asp:ContentPlaceHolder id="body" runat="server" >
 
                     </asp:ContentPlaceHolder>
             </div>
