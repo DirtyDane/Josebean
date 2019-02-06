@@ -8,24 +8,23 @@ Partial Class Add_patient
     Protected Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Try
             With Me
-                txtAddress.Text = ""
-                txtCell.Text = ""
-                txtCity.Text = ""
-                txtDOB.Text = ""
                 txtFname.Text = ""
-                txtHmPn.Text = ""
                 txtMidinit.Text = ""
-                txtState.Text = ""
                 txtLname.Text = ""
+                txtDOB.Text = ""
+                txtHmPn.Text = ""
+                txtCell.Text = ""
+                drpGender.SelectedValue = "Gender"
+                txtAddress.Text = ""
+                txtCity.Text = ""
+                txtState.Text = ""
                 txtZip.Text = ""
-                drpGender.Text = "Gender"
-
-
-
-
             End With
         Catch ex As Exception
 
         End Try
+    End Sub
+    Protected Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Response.Redirect("FindPatient.aspx")
     End Sub
 End Class
