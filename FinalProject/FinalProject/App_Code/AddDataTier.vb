@@ -11,7 +11,7 @@ Public Class AddDataTier
         Try
             'open connection
             connString.Open()
-
+            'THIS COMMENT IS A TEST TO SEE IF THINGS WORK NOW
             'command
             With cmdString
                 .Parameters.Clear()
