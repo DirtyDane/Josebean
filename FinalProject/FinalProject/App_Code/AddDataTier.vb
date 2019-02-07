@@ -9,9 +9,9 @@ Public Class AddDataTier
     Dim cmdString As New SqlClient.SqlCommand
     Public Function AddPhysician(ByVal Fname As String, ByVal Midinit As String, ByVal Lname As String, ByVal DOB As String, ByVal HmPn As String, ByVal Cell As String, ByVal Gender As String, ByVal Address As String, ByVal City As String, ByVal State As String, ByVal Zip As String) As DataSet
         Try
+            'i JUST REMOVED and added back in a line to see what happens and if this fixes everything now
             'open connection
             connString.Open()
-            'THIS COMMENT IS A TEST TO SEE IF THINGS WORK NOW
             'command
             With cmdString
                 .Parameters.Clear()
