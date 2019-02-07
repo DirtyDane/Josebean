@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -33,6 +35,22 @@ li a {
 li a:hover {
   background-color: #09367B;
 }
+
+.wrapper {
+    padding-top:125px;
+}
+
+.content {
+    padding-left:15%;
+}
+
+.Login {
+    background-color:whitesmoke;
+    position:fixed;
+    right:0;
+    top:0;
+    width:300px;
+}
     </style>
     <title>
         <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
@@ -43,13 +61,48 @@ li a:hover {
     </head>
 <body>
      <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+         
+        
+         
+         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+             <ContentTemplate>
+                
+                  <asp:Panel ID="pnlSignIn" runat="server" CssClass="Login">
+                        <asp:Login ID="Login1" runat="server" OnLoginError="Login1_LoginError"></asp:Login>
+                    </asp:Panel>
+
+                 <asp:LoginView ID="LoginView1" runat="server">
+
+                     <AnonymousTemplate><span>Welcome Guest</span>
+
+                         <asp:LinkButton ID="linkSignIn" runat="server" Text="Sign In |" OnClick="linkSignIn_Click"></asp:LinkButton>
+
+                         
+
+                         <ajaxToolkit:ModalPopupExtender ID="SignInPopup" runat="server" Enabled="true"
+                             TargetControlID="linkSignIn" PopupControlID="pnlSignIn" PopupDragHandleControlID="linkSignIn" ></ajaxToolkit:ModalPopupExtender>
+                     </AnonymousTemplate>
+
+                     <LoggedInTemplate>
+                         <span style="color:#ff7f00">Welcome</span>
+
+                         <asp:LoginName ID="LoginName1" runat="server" />|<asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="Logout" />
+                         
+                     </LoggedInTemplate>
+                 </asp:LoginView>
+                 <asp:Label ID="lblTest" runat="server" Text=""></asp:Label>
+             </ContentTemplate>
+         </asp:UpdatePanel>
+
+         
         <div class="wrapper">
             <div class="menubar">
                 <ul>
                     <li><a href="Default.aspx">Home</a></li>
                     <li><a href="#">Patients</a></li>
                     <li><a href="#">Physicians</a></li>
-                    <li><a href="#">Perscriptions</a></li>
+                    <li><a href="#">Prescriptions</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
@@ -60,7 +113,7 @@ li a:hover {
 
                 </asp:ContentPlaceHolder>    
                 
-                <asp:ContentPlaceHolder id="body" runat="server">
+                <asp:ContentPlaceHolder id="body" runat="server" >
 
                     </asp:ContentPlaceHolder>
             </div>
