@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" StylesheetTheme="Theme1" %>
-<!--
-
--->
+<asp:Content>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
@@ -178,5 +176,5 @@
             </tr>
         </table>
     
-        </div>
+       
 </asp:Content>
