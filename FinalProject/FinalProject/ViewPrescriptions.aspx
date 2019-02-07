@@ -12,11 +12,13 @@
 
     <asp:GridView ID="gdvPrescriptions" runat="server" AutoGenerateColumns="false" CssClass="GridView" AllowSorting="true" AllowPaging="true">
         <Columns>
-            <asp:BoundField DataField="Patient Name" HeaderText="Patient Name" SortExpression="Patient Name" />
+            <asp:BoundField DataField="Patient Name" HeaderText="Patient Name" />
             <asp:BoundField DataField="Physician Name" HeaderText="Physician Name" SortExpression="Physician Name" />
             <asp:BoundField DataField="Medication" HeaderText="Medication" SortExpression="Medication" />
-            <asp:BoundField DataField="Dosage" HeaderText="Dosage" SortExpression="Dosage" />
+            <asp:BoundField DataField="Dosage" HeaderText="Dosage" />
             <asp:BoundField DataField="Intake Method" HeaderText="Intake Method" SortExpression="Intake Method" />
+            <asp:BoundField DataField="Refill" HeaderText="Refill(s)" />
+            <asp:BoundField DataField="REFILL_DATE" HeaderText="Last Refill Date"  />
             
             <asp:TemplateField>
                 <ItemTemplate>

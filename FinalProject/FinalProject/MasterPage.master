@@ -76,7 +76,7 @@ li a:hover {
 
                      <AnonymousTemplate><span>Welcome Guest</span>
 
-                         <asp:LinkButton ID="linkSignIn" runat="server" Text="Sign In |"></asp:LinkButton>
+                         <asp:LinkButton ID="linkSignIn" runat="server" Text="Sign In |" OnClick="linkSignIn_Click"></asp:LinkButton>
 
                          
 
@@ -87,7 +87,7 @@ li a:hover {
                      <LoggedInTemplate>
                          <span style="color:#ff7f00">Welcome</span>
 
-                         <asp:LoginName ID="LoginName1" runat="server" />|<asp:LoginStatus ID="LoginStatus1" runat="server" />
+                         <asp:LoginName ID="LoginName1" runat="server" />|<asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="Logout" />
                          
                      </LoggedInTemplate>
                  </asp:LoginView>

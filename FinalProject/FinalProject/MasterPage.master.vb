@@ -81,5 +81,14 @@ Partial Class MasterPage
     Protected Sub Login1_LoginError(sender As Object, e As EventArgs) Handles Login1.LoginError
 
     End Sub
+
+    Protected Sub linkSignIn_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub Logout()
+        Session.Clear()
+    End Sub
+
 End Class
 
