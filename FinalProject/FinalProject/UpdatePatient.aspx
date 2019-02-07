@@ -1,57 +1,63 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="UpdatePatient.aspx.vb" Inherits="UpdatePatient" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="UpdatePatient.aspx.vb" Inherits="UpdatePatient" MasterPageFile="~/MasterPage.master" StylesheetTheme="Theme1"%>
 
 
-
-<!DOCTYPE html>
-<link href="UpdatePatient.css" rel="stylesheet" />
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <h1 align="center">Update Patient Information</h1>
+<asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
+     <div>
+            <h1 align="center"><u>Update Patient Information</u></h1>
 
             <table align="center">
 
                 <tr>
                     <td>
-                        <b>Patient ID:</b> &nbsp; <asp:TextBox ID="txtPatientID" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblPatientID" runat="server" Text="Patient ID:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtPatientID" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>Cell Phone:</b> &nbsp; <asp:TextBox ID="txtCPhone" runat="server" TextMode="Phone"></asp:TextBox>
+                        <asp:Label ID="lblCellPhone" runat="server" Text="Cell Phone:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtCPhone" runat="server" TextMode="Phone"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <b>First Name:</b> &nbsp; <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblFName" runat="server" Text="First Name:" Font-Bold="true"></asp:Label> 
+                        <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="*" ControlToValidate="txtFName" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>Gender:</b> &nbsp; <asp:ListBox ID="lbGender" runat="server" Height="22px" Width="123px" SelectionMode="Multiple">
+                        <asp:Label ID="lblGender" runat="server" Text="Gender:" Font-Bold="true"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvGender" runat="server" ErrorMessage="*" ControlToValidate="ddlGender" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:DropDownList ID="ddlGender" runat="server">
                             <asp:ListItem Selected="True">Select Gender</asp:ListItem>
                             <asp:ListItem>Male</asp:ListItem>
                             <asp:ListItem>Female</asp:ListItem>
-                        </asp:ListBox>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Middle Initial:</b> &nbsp; <asp:TextBox ID="txtMiddle" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblMiddle" runat="server" Text="Middle Initial:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtMiddle" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>Address:</b> &nbsp; <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblAddress" runat="server" Text="Address:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Last Name:</b> &nbsp; <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblLName" runat="server" Text="Last Name:" Font-Bold="true"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvLName" runat="server" ErrorMessage="*" ControlToValidate="txtLName" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>City:</b> &nbsp; <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblCity" runat="server" Text="City:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Date of Birth:</b> &nbsp; <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblDOB" runat="server" Text="Date of Birth:" Font-Bold="true"></asp:Label>
+                        <asp:RequiredFieldValidator ID="rfvDOB" runat="server" ErrorMessage="*" ControlToValidate="txtDOB" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>State:</b> &nbsp; <asp:ListBox ID="lbState" runat="server" Height="22px" Width="150px">
+                        <asp:Label ID="lblState" runat="server" Text="State:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:DropDownList ID="ddlState" runat="server">
                             <asp:ListItem Selected="True">Select State</asp:ListItem>
                             <asp:ListItem>Alabama</asp:ListItem>
                             <asp:ListItem>Alaska</asp:ListItem>
@@ -103,31 +109,26 @@
                             <asp:ListItem>West Virginia </asp:ListItem>
                             <asp:ListItem>Wisconsin</asp:ListItem>
                             <asp:ListItem>Wyoming</asp:ListItem>
-                        </asp:ListBox>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Home Phone:</b> &nbsp; <asp:TextBox ID="txtHPhone" runat="server" TextMode="Phone"></asp:TextBox>
+                        <asp:Label ID="lblHomePhone" runat="server" Text="Home Phone:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtHPhone" runat="server" TextMode="Phone"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>Zip:</b> &nbsp; <asp:TextBox ID="txtZip" runat="server" TextMode="Number"></asp:TextBox>
+                        <asp:Label ID="lblZip" runat="server" Text="Zip:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtZip" runat="server" TextMode="Number"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <asp:Button ID="btnUpdate" runat="server" Text="Update" Width="20%" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="20%" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnExit" runat="server" Text="Exit" Width="20%" />
-                    </td>
-                </tr>
-              
             </table>
+            <br />
+            <asp:Button ID="btnUpdate" runat="server" Text="Update"  />             
+            <asp:Button ID="btnClear" runat="server" Text="Clear" />
+            <asp:Button ID="btnExit" runat="server" Text="Exit" />
 
-
-
+            <br />
+            <br />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

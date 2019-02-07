@@ -5,27 +5,27 @@
 
 #txtPatient {
     width: 150px;
-    margin-left: 22px;
+    margin-left: 26px;
 }
 
 #txtPhysician {
     width: 150px;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 #ddlMedication {
     width: 150px;
-    margin-left: 35px;
+    margin-left: 40px;
 }
 
 #txtRefills {
     width: 150px;
-    margin-left: 53px;
+    margin-left: 62px;
 }
 
 #ddlDosage {
     width: 150px;
-    margin-left: 45px;
+    margin-left: 48px;
 }
 
 #ddlIntakeMethod {
@@ -34,9 +34,15 @@
 
 #ddlFrequency {
     width: 150px;
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
+#btnUpdate {
+    width:150px;
+    margin-left:35%
+}
 
-body {
+#btnCancel {
+    width:150px;
+    margin-left:10%
 }

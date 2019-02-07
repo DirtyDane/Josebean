@@ -21,12 +21,12 @@ Partial Class UpdatePatient
         '    .txtLName.Text = ds.Tables(0).Rows(0)("LNAME").ToString
         '    .txtAddress.Text = ds.Tables(0).Rows(0)("PAT_ADDRESS1").ToString
         '    .txtCity.Text = ds.Tables(0).Rows(0)("PAT_CITY").ToString
-        '    .lbState.Text = ds.Tables(0).Rows(0)("PAT_STATE").ToString
+        '    .ddlState.Text = ds.Tables(0).Rows(0)("PAT_STATE").ToString
         '    .txtZip.Text = ds.Tables(0).Rows(0)("PAT_ZIP").ToString
         '    .txtDOB.Text = ds.Tables(0).Rows(0)("DOB").ToString
         '    .txtHPhone.Text = ds.Tables(0).Rows(0)("HOME_PHONE").ToString
         '    .txtCPhone.Text = ds.Tables(0).Rows(0)("CELL_PHONE").ToString
-        '    .lbGender.Text = ds.Tables(0).Rows(0)("GENDER").ToString
+        '    .ddlGender.Text = ds.Tables(0).Rows(0)("GENDER").ToString
         'End With
     End Sub
 
@@ -41,10 +41,10 @@ Partial Class UpdatePatient
         '    DOB = txtDOB.Text.Trim
         '    HomePhone = txtHPhone.Text.Trim
         '    CellPhone = txtCPhone.Text.Trim
-        '    Gender = lbGender.Text.Trim
+        '    Gender = ddlGender.Text.Trim
         '    Address = txtAddress.Text.Trim
         '    City = txtCity.Text.Trim
-        '    State = lbState.Text.Trim
+        '    State = ddlState.Text.Trim
         '    ZIP = txtZip.Text.Trim
 
         '    ' If one of the fields that allow nulls that has a Masked TextBox is empty, insert a blank instead of inserting a blank mask.
@@ -93,15 +93,15 @@ Partial Class UpdatePatient
             '.txtDOB.Clear()
             '.txtHPhone.Clear()
             '.txtCPhone.Clear()
-            '.lbGender.Clear()
+            '.ddlGender.Clear()
             '.txtAddress.Clear()
             '.txtCity.Clear()
-            '.lbState.Clear()
+            '.ddlState.Clear()
             '.txtZip.Clear()
         End With
     End Sub
 
     Protected Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        'Me.Close()
+
     End Sub
 End Class
