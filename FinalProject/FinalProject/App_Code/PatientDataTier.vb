@@ -71,5 +71,71 @@ Public Class PatientDataTier
         End Try
     End Function
 
+    Public Sub FillPrescription(ByVal presno As Int32, ByVal refill As Int32)
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "FillPrescription"
+                .Parameters.Add("@PRESNO", SqlDbType.Int).Value = presno
+                .Parameters.Add("@REFILL", SqlDbType.Int).Value = refill
+                'command
 
+
+                Dim aAdapter As New SqlClient.SqlDataAdapter
+
+                aAdapter.UpdateCommand = cmdString
+
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+            Exit Try
+        Finally
+            connString.Close()
+        End Try
+    End Sub
+
+    Public Sub UpdatePatient(ByVal patientid As Int32, ByVal fname As String, ByVal mi As String, ByVal lname As String, ByVal dob As String, ByVal homephone As String, ByVal cellphone As String,
+                            ByVal gender As String, ByVal address As String, ByVal city As String, ByVal state As String, ByVal zip As String)
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "UpdatePatient"
+                .Parameters.Add("@PATIENT_ID", SqlDbType.Int).Value = patientid
+                .Parameters.Add("@FNAME", SqlDbType.VarChar, 25).Value = fname
+                .Parameters.Add("@MI", SqlDbType.Char, 1).Value = mi
+                .Parameters.Add("@LNAME", SqlDbType.VarChar, 25).Value = lname
+                .Parameters.Add("@DOB", SqlDbType.Date).Value = dob
+                .Parameters.Add("@HOME_PHONE", SqlDbType.VarChar, 14).Value = homephone
+                .Parameters.Add("@CELL_PHONE", SqlDbType.VarChar, 14).Value = cellphone
+                .Parameters.Add("@GENDER", SqlDbType.Char, 1).Value = gender
+                .Parameters.Add("@PAT_ADDRESS1", SqlDbType.VarChar, 60).Value = address
+                .Parameters.Add("@PAT_CITY", SqlDbType.VarChar, 30).Value = city
+                .Parameters.Add("@PAT_STATE", SqlDbType.Char, 2).Value = state
+                .Parameters.Add("@PAT_ZIP", SqlDbType.VarChar, 9).Value = zip
+                'command
+
+                Dim aAdapter As New SqlClient.SqlDataAdapter
+
+                aAdapter.UpdateCommand = cmdString
+
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+            Exit Try
+        Finally
+            connString.Close()
+        End Try
+    End Sub
 End Class
