@@ -10,7 +10,7 @@
     width:80%;
 }
 
-.pageright {
+.pageleft {
     background-color:whitesmoke;
     float:left;
     align-content:flex-start;
@@ -30,4 +30,58 @@
     height:100%;
     width:80%;
     justify-content:center;
+    text-align:center;
+}
+
+.auto-style1 {
+    width: 97%;
+}
+
+.auto-style3 {
+    width: 137px;
+}
+
+.auto-style6 {
+    width: 137px;
+    height: 26px;
+}
+
+.auto-style9 {
+    width: 111px;
+}
+
+.auto-style10 {
+    width: 111px;
+    height: 26px;
+}
+
+.auto-style12 {
+    width: 66px;
+    height: 26px;
+}
+
+.auto-style13 {
+    margin-left: 40px;
+}
+
+.auto-style16 {
+    width: 66px;
+}
+
+.auto-style18 {
+    height: 26px;
+    width: 10px;
+}
+
+.auto-style19 {
+    width: 1px;
+}
+
+.auto-style20 {
+    width: 1px;
+    height: 26px;
+}
+
+.auto-style21 {
+    width: 10px;
 }
