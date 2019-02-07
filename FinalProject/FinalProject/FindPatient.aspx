@@ -67,7 +67,7 @@
                 <asp:BoundField DataField="City" HeaderText="City" />
                 <asp:BoundField DataField="State" HeaderText="State" />
                 <asp:BoundField DataField="Zip" HeaderText="Zip" />
-                <asp:HyperLinkField DataNavigateUrlFields="PATIENT_ID" DataNavigateUrlFormatString="~\ViewPrescriptions.aspx?ID={0}" Text="View Prescriptions" Target="_parent" />
+                <asp:HyperLinkField DataNavigateUrlFields="PATIENT_ID" DataNavigateUrlFormatString="~\ViewPrescriptions.aspx?ID={0}" Text="View Prescriptions" Target="_blank" />
 
                 <asp:TemplateField>
                     <ItemTemplate>

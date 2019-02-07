@@ -75,7 +75,7 @@ Partial Class FindPatient
 
 
     Private Sub FindPatient_PreRenderComplete(sender As Object, e As EventArgs) Handles Me.PreRenderComplete
-        If ViewState("Lname") Is Nothing Then
+        If Not IsPostBack Then
         Else
             Try
                 txtLname.Text = ViewState("Lname").ToString()

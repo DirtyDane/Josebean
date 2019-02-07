@@ -1,4 +1,3 @@
-﻿
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" %>
 
 <!DOCTYPE html>
@@ -53,10 +52,6 @@
 </head>
 <body style="width: 492px; height: 269px">
     <form id="form1" runat="server">
-
-﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" StylesheetTheme="Theme1" %>
-<asp:Content>
-
         <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
@@ -232,11 +227,6 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-
     </form>
 </body>
 </html>
-=======
-    
-       
-</asp:Content>

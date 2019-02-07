@@ -7,7 +7,6 @@
         <asp:Label ID="lblPatName" runat="server" Text="Patient Name:"></asp:Label>
         &nbsp;&nbsp;
         <asp:Label ID="lblNameOutput" runat="server" Text="" BorderStyle="Inset" BackColor="White"></asp:Label>
-        <br /><br />
     
 
     <asp:GridView ID="gdvPrescriptions" runat="server" AutoGenerateColumns="false" CssClass="GridView" AllowSorting="true" AllowPaging="true">

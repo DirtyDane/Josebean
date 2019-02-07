@@ -70,6 +70,4 @@ Public Class PatientDataTier
             connString.Close()
         End Try
     End Function
-
-
 End Class
