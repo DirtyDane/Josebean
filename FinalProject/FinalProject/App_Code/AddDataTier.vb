@@ -21,6 +21,7 @@ Public Class AddDataTier
                 .CommandText = "ADD_PHYSICIAN"
                 'define input parameter
                 .Parameters.Add("@FNAME", SqlDbType.VarChar, 25).Value = Fname
+                .Parameters.Add("@MI", SqlDbType.VarChar, 25).Value = Midinit
                 .Parameters.Add("@LNAME", SqlDbType.VarChar, 25).Value = Lname
                 .Parameters.Add("@Gender", SqlDbType.Char, 1).Value = Gender
                 .Parameters.Add("@DOB", SqlDbType.Date).Value = DOB
@@ -45,6 +46,41 @@ Public Class AddDataTier
             connString.Close()
         End Try
     End Function
+
+    Public Function AddPatient(ByVal Fname As String, ByVal Midinit As String, ByVal Lname As String, ByVal DOB As String, ByVal HmPn As String, ByVal Cell As String, ByVal Gender As String, ByVal Address As String, ByVal City As String, ByVal State As String, ByVal Zip As String) As DataSet
+        Try
+
+            connString.Open()
+
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 900
+                .CommandText = "ADD_PATIENT2"
+                'input parameters
+                .Parameters.Add("@FNAME", SqlDbType.VarChar, 25).Value = Fname
+                .Parameters.Add("@MI", SqlDbType.VarChar, 25).Value = Midinit
+                .Parameters.Add("@LNAME", SqlDbType.VarChar, 25).Value = Lname
+                .Parameters.Add("@Gender", SqlDbType.Char, 1).Value = Gender
+                .Parameters.Add("@DOB", SqlDbType.Date).Value = DOB
+                .Parameters.Add("@HOME_PHONE", SqlDbType.VarChar, 14).Value = HmPn
+                .Parameters.Add("@CELL_PHONE", SqlDbType.VarChar, 14).Value = Cell
+                .Parameters.Add("@PAT_ADDRESS", SqlDbType.VarChar, 60).Value = Address
+                .Parameters.Add("@PAT_CITY", SqlDbType.VarChar, 30).Value = City
+                .Parameters.Add("@PAT_STATE", SqlDbType.Char, 2).Value = State
+                .Parameters.Add("@PAT_ZIP", SqlDbType.VarChar, 10).Value = Zip
+
+                .ExecuteNonQuery()
+            End With
+
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message)
+        Finally
+            connString.Close()
+        End Try
+    End Function
+
 End Class
 
 

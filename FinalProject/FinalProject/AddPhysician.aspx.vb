@@ -17,7 +17,7 @@ Partial Class AddPhysician
                 dprGender.SelectedValue = "Gender"
                 txtAddress.Text = ""
                 txtCity.Text = ""
-                txtState.Text = ""
+                drpState.SelectedValue = "Select State"
                 txtZip.Text = ""
             End With
         Catch ex As Exception
@@ -40,7 +40,7 @@ Partial Class AddPhysician
             Gender = dprGender.Text.Substring(0, 1)
             Address = txtAddress.Text.Trim
             City = txtCity.Text.Trim
-            State = txtState.Text.Trim
+            State = drpState.Text.Trim
             Zip = txtZip.Text.Trim
 
             AddDataTier.AddPhysician(Fname, Midinit, Lname, DOB, HmPn, Cell, Gender, Address, City, State, Zip)
