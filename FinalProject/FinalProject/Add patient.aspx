@@ -1,56 +1,8 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" StylesheetTheme="Theme1" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 97%;
-        }
-        .auto-style3 {
-            width: 137px;
-        }
-        .auto-style6 {
-            width: 137px;
-            height: 26px;
-        }
-        .auto-style9 {
-            width: 111px;
-        }
-        .auto-style10 {
-            width: 111px;
-            height: 26px;
-        }
-        .auto-style12 {
-            width: 66px;
-            height: 26px;
-        }
-        .auto-style13 {
-            margin-left: 40px;
-        }
-        .auto-style16 {
-            width: 66px;
-        }
-        .auto-style18 {
-            height: 26px;
-            width: 10px;
-        }
-        .auto-style19 {
-            width: 1px;
-        }
-        .auto-style20 {
-            width: 1px;
-            height: 26px;
-        }
-        .auto-style21 {
-            width: 10px;
-        }
-    </style>
-</head>
-<body style="width: 475px; height: 270px">
-    <form id="form1" runat="server">
+<asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
+    <div class="pagemid"> 
+    
         <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
@@ -118,7 +70,7 @@
                     <asp:RequiredFieldValidator ID="valDOB" runat="server" ControlToValidate="txtDOB" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtDOB" runat="server">__/__/____</asp:TextBox>
+                    <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblState" runat="server" Text="State"></asp:Label>
@@ -133,13 +85,13 @@
                     <asp:Label ID="lblHmPn" runat="server" Text="Home Phone"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtHmPn" runat="server">(___)___-____</asp:TextBox>
+                    <asp:TextBox ID="txtHmPn" runat="server" TextMode="Phone"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblZip" runat="server" Text="Zip"></asp:Label>
                 </td>
                 <td class="auto-style21">
-                    <asp:TextBox ID="txtZip" runat="server">_____</asp:TextBox>
+                    <asp:TextBox ID="txtZip" runat="server" TextMode="Number"></asp:TextBox>
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
@@ -148,7 +100,7 @@
                     <asp:Label ID="lblCell" runat="server" Text="Cell Phone"></asp:Label>
                 </td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="txtCell" runat="server">(___)___-____</asp:TextBox>
+                    <asp:TextBox ID="txtCell" runat="server" TextMode="Phone"></asp:TextBox>
                 </td>
                 <td class="auto-style12"></td>
                 <td class="auto-style18"></td>
@@ -158,7 +110,7 @@
                 <td class="auto-style9">&nbsp;</td>
                 <td colspan="3">
                     <asp:Button ID="btnAddPhysician" runat="server" BorderStyle="Outset" Text="Add  Patient" Width="100px" />
-                    <asp:Button ID="btnClear" runat="server" BorderStyle="Inset" Text="Clear" Width="100px" />
+                    <asp:Button ID="btnClear" runat="server" BorderStyle="Outset" Text="Clear" Width="100px" />
                     <asp:Button ID="btnExit" runat="server" BorderStyle="Outset" Text="Exit" Width="100px" />
                 </td>
                 <td class="auto-style19">&nbsp;</td>
@@ -172,6 +124,6 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-    </form>
-</body>
-</html>
+    
+        </div>
+</asp:Content>

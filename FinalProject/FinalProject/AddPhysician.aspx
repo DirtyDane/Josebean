@@ -1,14 +1,8 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AddPhysician.aspx.vb" Inherits="AddPhysician" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="AddPhysician.aspx.vb" Inherits="AddPhysician" StylesheetTheme="Theme1" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <table class="auto-style1">
+<asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
+    <div class="pagemid">
+    <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
                 <td class="auto-style13" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -74,7 +68,7 @@
                     <asp:Label ID="lblDOB" runat="server" Text="Date of Birth"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtDOB" runat="server">__/__/____</asp:TextBox>
+                    <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblState" runat="server" Text="State"></asp:Label>
@@ -115,7 +109,7 @@
                 <td colspan="3">
                     <asp:Button ID="btnAddPhysician" runat="server" BorderStyle="Ridge" Text="Add  Physisican" Width="114px" />
                     <asp:Button ID="btnClear" runat="server" BorderStyle="Ridge" Text="Clear" Width="100px" CausesValidation="False" />
-                    <asp:Button ID="btnExit" runat="server" BorderStyle="Ridge" Text="Exit" Width="100px" />
+                    <asp:Button ID="btnExit" runat="server" BorderStyle="Ridge" Text="Exit" Width="100px" CausesValidation="False" />
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
@@ -124,10 +118,11 @@
                 <td colspan="2">
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
                 </td>
-                <td class="auto-style21">&nbsp;</td>
+                <td class="auto-style21">
+                    <asp:Label ID="lblSuccess" runat="server" Text="Success" Visible="False"></asp:Label>
+                </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-    </form>
-</body>
-</html>
+        </div>
+</asp:Content>
