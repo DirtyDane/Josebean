@@ -1,57 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="Add patient.aspx.vb" Inherits="Add_patient" StylesheetTheme="Theme1" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 99%;
-            height: 265px;
-        }
-        .auto-style3 {
-            width: 137px;
-        }
-        .auto-style6 {
-            width: 137px;
-            height: 26px;
-        }
-        .auto-style9 {
-            width: 111px;
-        }
-        .auto-style10 {
-            width: 111px;
-            height: 26px;
-        }
-        .auto-style12 {
-            width: 66px;
-            height: 26px;
-        }
-        .auto-style13 {
-            margin-left: 40px;
-        }
-        .auto-style16 {
-            width: 66px;
-        }
-        .auto-style18 {
-            height: 26px;
-            width: 10px;
-        }
-        .auto-style19 {
-            width: 1px;
-        }
-        .auto-style20 {
-            width: 1px;
-            height: 26px;
-        }
-        .auto-style21 {
-            width: 10px;
-        }
-    </style>
-</head>
-<body style="width: 492px; height: 269px">
-    <form id="form1" runat="server">
+
+<asp:Content ID="Body" ContentPlaceHolderID="body" runat="server">
+    
         <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
@@ -64,14 +16,14 @@
             <tr>
                 <td class="auto-style9">
                     <asp:Label ID="lblFname" runat="server" Text="First Name"></asp:Label>
-                    <asp:RequiredFieldValidator ID="valFname" runat="server" ControlToValidate="txtFname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valFname" runat="server" ControlToValidate="txtFname" ErrorMessage="Please provide your first name" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtFname" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style16">
                     <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
-                    <asp:RequiredFieldValidator ID="valGender" runat="server" ControlToValidate="drpGender" ErrorMessage="*" ForeColor="Red" InitialValue="Gender"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valGender" runat="server" ControlToValidate="drpGender" ErrorMessage="Please choose a Gender" ForeColor="Red" InitialValue="Gender"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style21">
                     <asp:DropDownList ID="drpGender" runat="server" Width="122px">
@@ -100,7 +52,7 @@
             <tr>
                 <td class="auto-style10">
                     <asp:Label ID="lblLname" runat="server" Text="Last Name"></asp:Label>
-                    <asp:RequiredFieldValidator ID="valLname" runat="server" ControlToValidate="txtLname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valLname" runat="server" ControlToValidate="txtLname" ErrorMessage="Please Provide a Last name" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style6">
                     <asp:TextBox ID="txtLname" runat="server"></asp:TextBox>
@@ -116,7 +68,7 @@
             <tr>
                 <td class="auto-style9">
                     <asp:Label ID="lblDOB" runat="server" Text="Date of Birth"></asp:Label>
-                    <asp:RequiredFieldValidator ID="valDOB" runat="server" ControlToValidate="txtDOB" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valDOB" runat="server" ControlToValidate="txtDOB" ErrorMessage="Please Provide Date of Birth" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
@@ -227,6 +179,5 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-    </form>
-</body>
-</html>
+   
+</asp:Content>

@@ -1,18 +1,7 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AddPhysician.aspx.vb" Inherits="AddPhysician" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="AddPhysician.aspx.vb" Inherits="AddPhysician" StylesheetTheme="Theme1" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            height: 26px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Body" ContentPlaceHolderID="body" runat="server">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
@@ -187,6 +176,4 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-    </form>
-</body>
-</html>
+    </asp:Content>

@@ -87,19 +87,19 @@ Partial Class ViewPrescriptions
 
     'GridButtons
 
-    'Protected Sub ibtnRefill_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
-    '    Dim presNO As Int32
-    '    Dim refill As Int32
+    Protected Sub ibtnRefill_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
+        '    Dim presNO As Int32
+        '    Dim refill As Int32
 
-    '    Try
-    '        Dim aPatient As New PatientDataTier
+        '    Try
+        '        Dim aPatient As New PatientDataTier
 
-    '        refill = gdvPrescriptions.
+        '        refill = gdvPrescriptions.
 
-    '        presNO = gdvPrescriptions.SelectedRows(0).Cells(0).Value
-    '    Catch ex As Exception
+        '        presNO = gdvPrescriptions.SelectedRows(0).Cells(0).Value
+        '    Catch ex As Exception
 
-    '    End Try
+        '    End Try
 
-    'End Sub
+    End Sub
 End Class
