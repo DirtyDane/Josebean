@@ -82,38 +82,3 @@ Public Class AddDataTier
     End Function
 
 End Class
-
-
-'Try
-
-''open connection
-'connString.Open()
-
-''command
-'With cmdString
-'.Parameters.Clear()
-'.Connection = connString
-'.CommandType = CommandType.StoredProcedure
-'.CommandTimeout = 900
-'.CommandText = "UpdateStudent"
-''define input parameter
-'.Parameters.Add("@Stu_ID", SqlDbType.VarChar, 6).Value = stuID
-'.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname
-'.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname
-'.Parameters.Add("@DOB", SqlDbType.DateTime).Value = DOB
-'.Parameters.Add("@gender_desc", SqlDbType.Char, 6).Value = gender_desc
-'.Parameters.Add("@state", SqlDbType.Char, 2).Value = state
-
-
-''executec command
-'.ExecuteNonQuery()
-'End With
-
-
-'Catch ex As Exception
-
-'Throw New ArgumentException(ex.Message)
-'Finally
-'connString.Close()
-
-'End Try
