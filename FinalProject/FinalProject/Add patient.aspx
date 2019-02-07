@@ -7,7 +7,8 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 97%;
+            width: 99%;
+            height: 265px;
         }
         .auto-style3 {
             width: 137px;
@@ -49,7 +50,7 @@
         }
     </style>
 </head>
-<body style="width: 475px; height: 270px">
+<body style="width: 492px; height: 269px">
     <form id="form1" runat="server">
         <table class="auto-style1">
             <tr>
@@ -124,7 +125,59 @@
                     <asp:Label ID="lblState" runat="server" Text="State"></asp:Label>
                 </td>
                 <td class="auto-style21">
-                    <asp:TextBox ID="txtState" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="drpState" runat="server" Height="16px" Width="127px">
+                        <asp:ListItem>Select State</asp:ListItem>
+                        <asp:ListItem Value="AL">Alabama</asp:ListItem>
+                        <asp:ListItem Value="AK">Alaska</asp:ListItem>
+                        <asp:ListItem Value="AZ">Arizona</asp:ListItem>
+                        <asp:ListItem Value="AR">Arkansas</asp:ListItem>
+                        <asp:ListItem Value="CA">California</asp:ListItem>
+                        <asp:ListItem Value="CO">Colorado</asp:ListItem>
+                        <asp:ListItem Value="CT">Connecticut</asp:ListItem>
+                        <asp:ListItem Value="DE">Delaware</asp:ListItem>
+                        <asp:ListItem Value="FL">Florida</asp:ListItem>
+                        <asp:ListItem Value="GA">Georgia</asp:ListItem>
+                        <asp:ListItem Value="HI">Hawaii</asp:ListItem>
+                        <asp:ListItem Value="ID">Idaho</asp:ListItem>
+                        <asp:ListItem Value="IL">Illinois</asp:ListItem>
+                        <asp:ListItem Value="IN">Indiana</asp:ListItem>
+                        <asp:ListItem Value="IA">Iowa</asp:ListItem>
+                        <asp:ListItem Value="KS">Kansas</asp:ListItem>
+                        <asp:ListItem Value="KY">Kentucky</asp:ListItem>
+                        <asp:ListItem Value="LA">Louisiana</asp:ListItem>
+                        <asp:ListItem Value="ME">Maine</asp:ListItem>
+                        <asp:ListItem Value="MD">Maryland</asp:ListItem>
+                        <asp:ListItem Value="MA">Massachusetts</asp:ListItem>
+                        <asp:ListItem Value="MI">Michigan</asp:ListItem>
+                        <asp:ListItem Value="MN">Minnesota</asp:ListItem>
+                        <asp:ListItem Value="MS">Mississippi</asp:ListItem>
+                        <asp:ListItem Value="MO">Missouri</asp:ListItem>
+                        <asp:ListItem Value="MT">Montana</asp:ListItem>
+                        <asp:ListItem Value="NE">Nebraska</asp:ListItem>
+                        <asp:ListItem Value="NV">Nevada</asp:ListItem>
+                        <asp:ListItem Value="NH">New Hampshire</asp:ListItem>
+                        <asp:ListItem Value="NJ">New Jersey</asp:ListItem>
+                        <asp:ListItem Value="NM">New Mexico</asp:ListItem>
+                        <asp:ListItem Value="NY">New York</asp:ListItem>
+                        <asp:ListItem Value="NC">North Carolina</asp:ListItem>
+                        <asp:ListItem Value="ND">North Dakota</asp:ListItem>
+                        <asp:ListItem Value="OH">Ohio</asp:ListItem>
+                        <asp:ListItem Value="OK">Oklahoma</asp:ListItem>
+                        <asp:ListItem Value="OR">Oregon</asp:ListItem>
+                        <asp:ListItem Value="PA">Pennsylvania</asp:ListItem>
+                        <asp:ListItem Value="RI">Rhode Island</asp:ListItem>
+                        <asp:ListItem Value="SC">South Caronlina</asp:ListItem>
+                        <asp:ListItem Value="SD">South Daokta</asp:ListItem>
+                        <asp:ListItem Value="TN">Temmessee</asp:ListItem>
+                        <asp:ListItem Value="TX">Texas</asp:ListItem>
+                        <asp:ListItem Value="UT">Utah</asp:ListItem>
+                        <asp:ListItem Value="VT">Vermont</asp:ListItem>
+                        <asp:ListItem Value="VA">Virginia</asp:ListItem>
+                        <asp:ListItem Value="WA">Washington</asp:ListItem>
+                        <asp:ListItem Value="WV">West Virginia</asp:ListItem>
+                        <asp:ListItem Value="WI">Wisconsin</asp:ListItem>
+                        <asp:ListItem Value="WY">Wyoming</asp:ListItem>
+                    </asp:DropDownList>
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
@@ -158,7 +211,7 @@
                 <td class="auto-style9">&nbsp;</td>
                 <td colspan="3">
                     <asp:Button ID="btnAddPhysician" runat="server" BorderStyle="Outset" Text="Add  Patient" Width="100px" />
-                    <asp:Button ID="btnClear" runat="server" BorderStyle="Inset" Text="Clear" Width="100px" />
+                    <asp:Button ID="btnClear" runat="server" BorderStyle="Outset" Text="Clear" Width="100px" />
                     <asp:Button ID="btnExit" runat="server" BorderStyle="Outset" Text="Exit" Width="100px" />
                 </td>
                 <td class="auto-style19">&nbsp;</td>
@@ -168,7 +221,9 @@
                 <td colspan="2">
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
                 </td>
-                <td class="auto-style21">&nbsp;</td>
+                <td class="auto-style21">
+                    <asp:Label ID="lblTest" runat="server" Text="Success" Visible="False"></asp:Label>
+                </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
