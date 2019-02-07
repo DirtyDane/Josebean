@@ -8,8 +8,8 @@ Public Class BusinessDataTier
     Dim connString As New SqlClient.SqlConnection(ConnectionStrings("connString").ConnectionString)
     Dim cmdString As New SqlClient.SqlCommand
 
-    Public Function Logon(ByVal uname As String, ByVal pwd As String) As String
-        Dim role As String
+    Public Function Logon(ByVal uname As String, ByVal pwd As String) As DataSet
+        Dim patID As New DataSet
 
         Try
             'open connection
@@ -19,7 +19,7 @@ Public Class BusinessDataTier
                 .Connection = connString
                 .CommandType = CommandType.StoredProcedure
                 .CommandTimeout = 1500
-                .CommandText = "LOGON"
+                .CommandText = "LOGON2"
                 .Parameters.Add("@LOGIN_NAME", SqlDbType.VarChar, 25).Value = uname
                 .Parameters.Add("@AUTH_PASS", SqlDbType.VarChar, 20).Value = pwd
             End With
@@ -30,9 +30,9 @@ Public Class BusinessDataTier
 
             aAdapter.SelectCommand = cmdString
 
-            role = aAdapter.ToString()
+            aAdapter.Fill(patID)
 
-            Return role
+            Return patID
 
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex.InnerException)
