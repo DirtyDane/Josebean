@@ -26,7 +26,7 @@
                         <tr>
 
                             <td>
-                                <asp:ImageButton ID="ibtnRefill" runat="server" ImageUrl="~/Images/pill.jpg" Height="40px" Width="40px" ToolTip="Fill Prescription" />
+                                <asp:ImageButton ID="ibtnRefill" runat="server" ImageUrl="~/Images/pill.jpg" OnCommand="ibtnRefill_Click" Height="40px" Width="40px" ToolTip="Fill Prescription" />
                             </td>
 
                             <td>
