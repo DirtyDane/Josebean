@@ -109,7 +109,7 @@ Public Class AddDataTier
         End Try
     End Function
 
-    Public Function GetDocBox()
+    Public Function GetDocBox() As DataSet
         Try
             'open connection
             connString.Open()
@@ -142,6 +142,37 @@ Public Class AddDataTier
         End Try
     End Function
 
+    Public Function GetMedBox() As DataSet
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "GetMed"
+            End With
+            'command
+
+
+            Dim aAdapter As New SqlClient.SqlDataAdapter
+
+            aAdapter.SelectCommand = cmdString
+
+            Dim aDataSet As New DataSet
+
+
+            aAdapter.Fill(aDataSet)
+
+            Return aDataSet
+
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+        Finally
+            connString.Close()
+        End Try
+    End Function
 End Class
 
 
