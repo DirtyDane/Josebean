@@ -65,7 +65,7 @@ Public Class PatientDataTier
 
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex.InnerException)
-            Exit Try
+
         Finally
             connString.Close()
         End Try
@@ -94,7 +94,7 @@ Public Class PatientDataTier
             End With
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex.InnerException)
-            Exit Try
+
         Finally
             connString.Close()
         End Try
@@ -133,7 +133,7 @@ Public Class PatientDataTier
             End With
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex.InnerException)
-            Exit Try
+
         Finally
             connString.Close()
         End Try

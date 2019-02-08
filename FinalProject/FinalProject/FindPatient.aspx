@@ -75,7 +75,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:ImageButton ID="ibtnAdd" runat="server" ImageUrl="~/Images/add.jpg" Height="42px" Width="42px" ToolTip="Add Prescription for Selected Patient" />
+                                    <asp:ImageButton ID="ibtnAdd" runat="server" ImageUrl="~/Images/add.jpg" Height="42px" Width="42px" OnCommand="ibtnAdd_Click" CommandArgument='<%#Eval("PATIENT_ID") %>' ToolTip="Add Prescription for Selected Patient" />
                                 </td>
 
                                 <td>
