@@ -9,15 +9,6 @@
 
                 <tr>
                     <td>
-                        <asp:Label ID="lblPatientID" runat="server" Text="Patient ID:" Font-Bold="true"></asp:Label> &nbsp; 
-                        <asp:TextBox ID="txtPatientID" runat="server"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblCellPhone" runat="server" Text="Cell Phone:" Font-Bold="true"></asp:Label> &nbsp; 
-                        <asp:TextBox ID="txtCPhone" runat="server" TextMode="Phone"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <asp:Label ID="lblFName" runat="server" Text="First Name:" Font-Bold="true"></asp:Label> 
                         <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="*" ControlToValidate="txtFName" ForeColor="Red"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
@@ -119,6 +110,12 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblZip" runat="server" Text="Zip:" Font-Bold="true"></asp:Label> &nbsp; 
                         <asp:TextBox ID="txtZip" runat="server" TextMode="Number"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblCellPhone" runat="server" Text="Cell Phone:" Font-Bold="true"></asp:Label> &nbsp; 
+                        <asp:TextBox ID="txtCPhone" runat="server" TextMode="Phone"></asp:TextBox>
                     </td>
                 </tr>
             </table>
