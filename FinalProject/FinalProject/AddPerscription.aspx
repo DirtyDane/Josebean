@@ -24,7 +24,7 @@
                     Intake Method:
                 </td>
                 <td class="auto-style62">
-                    <asp:TextBox ID="TextBox3" runat="server" Width="154px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlIntake" runat="server"></asp:DropDownList>
                 </td>
                 <td class="auto-style48"></td>
             </tr>
@@ -39,7 +39,7 @@
                     Frequency:
                 </td>
                 <td class="auto-style69">
-                    <asp:TextBox ID="txtFrequency" runat="server" Width="154px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlFrequency" runat="server"></asp:DropDownList>
                 </td>
                 <td class="auto-style20"></td>
             </tr>
@@ -62,18 +62,17 @@
             </tr>
             <tr>
                 <td class="auto-style64">
-                    Medication Number:&nbsp;&nbsp;&nbsp;
+                    Medication:&nbsp;&nbsp;&nbsp;
                 </td>
                 <td class="auto-style64">
-                    <cc1:ComboBox ID="ComboBox1" runat="server" MaxLength="0" style="display: inline;">
-                    </cc1:ComboBox>
+                    <asp:DropDownList ID="ddlMedication" runat="server"></asp:DropDownList>
                    
                 </td>
                 <td class="auto-style64" rowspan="2">
                     Refill Date:
                 </td>
                 <td class="auto-style64" rowspan="2">
-                    <asp:TextBox ID="TextBox6" runat="server" Width="154px"></asp:TextBox>
+                    <asp:Label ID="lblRefillDate" runat="server" Text="" BorderStyle="Inset"></asp:Label>
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
@@ -82,7 +81,7 @@
                     Dosage:&nbsp;&nbsp;&nbsp;
                 </td>
                 <td class="auto-style39">
-                    <asp:TextBox ID="TextBox2" runat="server" Width="154px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlDosage" runat="server"></asp:DropDownList>
                 </td>
                 <td class="auto-style42"></td>
             </tr>
