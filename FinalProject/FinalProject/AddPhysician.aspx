@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" MasterPageFile="~/MasterPage.master" CodeFile="AddPhysician.aspx.vb" Inherits="AddPhysician" StylesheetTheme="Theme1" %>
 
-<asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
-    <div class="pagemid">
-    <table class="auto-style1">
+
+<asp:Content ID="Body" ContentPlaceHolderID="body" runat="server">
+        <table class="auto-style1">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
                 <td class="auto-style13" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -64,16 +64,16 @@
                 <td class="auto-style20"></td>
             </tr>
             <tr>
-                <td class="auto-style9">
+                <td class="auto-style1">
                     <asp:Label ID="lblDOB" runat="server" Text="Date of Birth"></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style1">
                     <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
                 </td>
-                <td class="auto-style16">
+                <td class="auto-style1">
                     <asp:Label ID="lblState" runat="server" Text="State"></asp:Label>
                 </td>
-                <td class="auto-style21">
+                <td class="auto-style1">
                     <asp:DropDownList ID="drpState" runat="server" Height="16px" Width="127px">
                         <asp:ListItem>Select State</asp:ListItem>
                         <asp:ListItem Value="AL">Alabama</asp:ListItem>
@@ -128,7 +128,7 @@
                         <asp:ListItem Value="WY">Wyoming</asp:ListItem>
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style19">&nbsp;</td>
+                <td class="auto-style1"></td>
             </tr>
             <tr>
                 <td class="auto-style9">
@@ -176,5 +176,4 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-        </div>
-</asp:Content>
+    </asp:Content>

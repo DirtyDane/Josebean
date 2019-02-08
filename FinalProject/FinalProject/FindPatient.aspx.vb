@@ -140,9 +140,14 @@ Partial Class FindPatient
 
     'Sub procedures for buttons in datagrid
 
-    Private Sub AddButton(ByVal sender As Object, ByVal e As CommandEventArgs)
+    Protected Sub ibtnAdd_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
+        Dim recordToBeEdited As String
 
+        recordToBeEdited = Trim(e.CommandArgument)
 
+        Dim sb As New StringBuilder
+
+        Response.Redirect("AddPerscription.aspx?ID=" + recordToBeEdited.ToString, True)
     End Sub
 
 

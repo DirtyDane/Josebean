@@ -81,39 +81,67 @@ Public Class AddDataTier
         End Try
     End Function
 
+    Public Function GetPatient(ByVal patID As Int32) As DataSet
+        Try
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "GetPatientName"
+                .Parameters.Add("@PATIENT_ID", SqlDbType.Int).Value = patID
+
+            End With
+
+
+            Dim aAdapter As New SqlClient.SqlDataAdapter
+            aAdapter.SelectCommand = cmdString
+            Dim aDataset As New DataSet
+            aAdapter.Fill(aDataset)
+
+            Return aDataset
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+        Finally
+            connString.Close()
+        End Try
+    End Function
+
+    Public Function GetDocBox()
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "GetDocBox"
+            End With
+            'command
+
+
+            Dim aAdapter As New SqlClient.SqlDataAdapter
+
+            aAdapter.SelectCommand = cmdString
+
+            Dim aDataSet As New DataSet
+
+
+            aAdapter.Fill(aDataSet)
+
+            Return aDataSet
+
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+            Exit Try
+        Finally
+            connString.Close()
+        End Try
+    End Function
+
 End Class
 
 
-'Try
-
-''open connection
-'connString.Open()
-
-''command
-'With cmdString
-'.Parameters.Clear()
-'.Connection = connString
-'.CommandType = CommandType.StoredProcedure
-'.CommandTimeout = 900
-'.CommandText = "UpdateStudent"
-''define input parameter
-'.Parameters.Add("@Stu_ID", SqlDbType.VarChar, 6).Value = stuID
-'.Parameters.Add("@fname", SqlDbType.VarChar, 25).Value = fname
-'.Parameters.Add("@lname", SqlDbType.VarChar, 25).Value = lname
-'.Parameters.Add("@DOB", SqlDbType.DateTime).Value = DOB
-'.Parameters.Add("@gender_desc", SqlDbType.Char, 6).Value = gender_desc
-'.Parameters.Add("@state", SqlDbType.Char, 2).Value = state
-
-
-''executec command
-'.ExecuteNonQuery()
-'End With
-
-
-'Catch ex As Exception
-
-'Throw New ArgumentException(ex.Message)
-'Finally
-'connString.Close()
-
-'End Try
