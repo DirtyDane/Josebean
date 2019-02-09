@@ -15,74 +15,77 @@
             </tr>
             <tr>
                 <td class="auto-style62">
-                    Prescription Number:&nbsp;&nbsp;&nbsp;
-                </td>
+                    
+                    Patient Name:&nbsp;&nbsp;</td>
                 <td class="auto-style62">
-                    <asp:TextBox ID="TextBox1" runat="server" Width="154px"></asp:TextBox>
+                    
+                    <asp:Label ID="lblPatient" runat="server" Text=""></asp:Label>
+                    
                 </td>
                 <td class="auto-style62">
                     Intake Method:
                 </td>
                 <td class="auto-style62">
-                    <asp:DropDownList ID="ddlIntake" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlIntake" runat="server" CausesValidation="false"></asp:DropDownList>
+                    
+                    <asp:CompareValidator ID="comIntake" runat="server" ErrorMessage="Please Select an Intake Method" Text="*" ForeColor="Red" ControlToValidate="ddlIntake" ValueToCompare="0" Operator="NotEqual"></asp:CompareValidator>
                 </td>
                 <td class="auto-style48"></td>
             </tr>
             <tr>
                 <td class="auto-style69">
-                    Patient Name:&nbsp;&nbsp;
-                </td>
+                    &nbsp;Physician :&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style69">
-                    <asp:Label ID="lblPatient" runat="server" Text=""></asp:Label>
+                    <asp:DropDownList ID="ddlPhysician" runat="server" Height="16px" Width="154px">
+                    </asp:DropDownList>
+                    <asp:CompareValidator ID="comPhysician" runat="server" ErrorMessage="Please Select a Physician" Text="*" ForeColor="Red" ControlToValidate="ddlPhysician" ValueToCompare="0" Operator="NotEqual"></asp:CompareValidator>
                 </td>
                 <td class="auto-style69">
                     Frequency:
                 </td>
                 <td class="auto-style69">
                     <asp:DropDownList ID="ddlFrequency" runat="server"></asp:DropDownList>
+                    <asp:CompareValidator ID="comFrequency" runat="server" ErrorMessage="Please Select a Frequency" Text="*" ForeColor="Red" ControlToValidate="ddlFrequency" ValueToCompare="0" Operator="NotEqual"></asp:CompareValidator>
                 </td>
                 <td class="auto-style20"></td>
             </tr>
             <tr>
                 <td class="auto-style69">
-                    Physician :&nbsp;&nbsp;&nbsp;
-                </td>
+                    &nbsp;Medication:&nbsp;</td>
                 <td class="auto-style69">
-                    <asp:DropDownList ID="ddlPhysician" runat="server" Height="16px" Width="154px">
-                    </asp:DropDownList>
-                    
+                    <asp:DropDownList ID="ddlMedication" runat="server"></asp:DropDownList>
+                   <asp:CompareValidator ID="comMedication" runat="server" ErrorMessage="Please Select a Medication" Text="*" ForeColor="Red" ControlToValidate="ddlMedication" ValueToCompare="0" Operator="NotEqual"></asp:CompareValidator>
                 </td>
                 <td class="auto-style69">
                     Refill Count:
                 </td>
                 <td class="auto-style69">
-                    <asp:TextBox ID="TextBox5" runat="server" Width="154px"></asp:TextBox>
+                    <asp:TextBox ID="txtRefill" runat="server" Width="154px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="reqRefill" runat="server" ErrorMessage="Please Specify Refills" ControlToValidate="txtRefill" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style20"></td>
             </tr>
             <tr>
                 <td class="auto-style64">
-                    Medication:&nbsp;&nbsp;&nbsp;
-                </td>
+                    &nbsp;&nbsp;
+                    Dosage:&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style64">
-                    <asp:DropDownList ID="ddlMedication" runat="server"></asp:DropDownList>
-                   
+                    <asp:DropDownList ID="ddlDosage" runat="server"></asp:DropDownList>
+                   <asp:CompareValidator ID="comDosage" runat="server" ErrorMessage="Please Select a Dosage" Text="*" ForeColor="Red" ControlToValidate="ddlDosage" ValueToCompare="0" Operator="NotEqual"></asp:CompareValidator>
                 </td>
                 <td class="auto-style64" rowspan="2">
-                    Refill Date:
+                    
                 </td>
                 <td class="auto-style64" rowspan="2">
-                    <asp:Label ID="lblRefillDate" runat="server" Text="" BorderStyle="Inset"></asp:Label>
+                    
                 </td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style39">
-                    Dosage:&nbsp;&nbsp;&nbsp;
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style39">
-                    <asp:DropDownList ID="ddlDosage" runat="server"></asp:DropDownList>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style42"></td>
             </tr>
             <tr>
@@ -106,7 +109,7 @@
             <tr>
                 <td class="auto-style66"></td>
                 <td colspan="2" class="auto-style36">
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" DisplayMode="List" />
                 </td>
                 <td class="auto-style37"></td>
                 <td class="auto-style38"></td>

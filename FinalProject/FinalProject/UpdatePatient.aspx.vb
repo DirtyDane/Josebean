@@ -1,35 +1,41 @@
-﻿
+﻿Imports System.Data
 Partial Class UpdatePatient
     Inherits System.Web.UI.Page
-    Public patIDUpdate As Int32
+
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim patID As Int32
 
-        patID = patIDUpdate
+        If Request("ID") IsNot Nothing And Request("ID") <> String.Empty Then
 
-        Dim aPatient As New PatientDataTier
-        Dim ds As New Dataset
-        Dim ds1 As New DataSet
 
-        ds = aPatient.GetPatient(patID)
+            ViewState("patID") = Request("ID")
 
-        With Me
-            .txtFName.Text = ds.Tables(0).Rows(0)("FNAME").ToString
-            .txtMiddle.Text = ds.Tables(0).Rows(0)("MI").ToString
-            .txtLName.Text = ds.Tables(0).Rows(0)("LNAME").ToString
-            .txtAddress.Text = ds.Tables(0).Rows(0)("PAT_ADDRESS1").ToString
-            .txtCity.Text = ds.Tables(0).Rows(0)("PAT_CITY").ToString
-            .ddlState.Text = ds.Tables(0).Rows(0)("PAT_STATE").ToString
-            .txtZip.Text = ds.Tables(0).Rows(0)("PAT_ZIP").ToString
-            .txtDOB.Text = ds.Tables(0).Rows(0)("DOB").ToString
-            .txtHPhone.Text = ds.Tables(0).Rows(0)("HOME_PHONE").ToString
-            .txtCPhone.Text = ds.Tables(0).Rows(0)("CELL_PHONE").ToString
-            .ddlGender.Text = ds.Tables(0).Rows(0)("GENDER").ToString
-        End With
+            patID = Int32.Parse(ViewState("patID"))
+
+            Dim aPatient As New PatientDataTier
+            Dim ds As New Dataset
+            Dim ds1 As New DataSet
+
+            ds = aPatient.GetPatient2(patID)
+
+            With Me
+                .txtFName.Text = ds.Tables(0).Rows(0)("FNAME").ToString
+                .txtMiddle.Text = ds.Tables(0).Rows(0)("MI").ToString
+                .txtLName.Text = ds.Tables(0).Rows(0)("LNAME").ToString
+                .txtAddress.Text = ds.Tables(0).Rows(0)("PAT_ADDRESS1").ToString
+                .txtCity.Text = ds.Tables(0).Rows(0)("PAT_CITY").ToString
+                .ddlState.Text = ds.Tables(0).Rows(0)("PAT_STATE").ToString
+                .txtZip.Text = ds.Tables(0).Rows(0)("PAT_ZIP").ToString
+                .txtDOB.Text = ds.Tables(0).Rows(0)("DOB").ToString
+                .txtHPhone.Text = ds.Tables(0).Rows(0)("HOME_PHONE").ToString
+                .txtCPhone.Text = ds.Tables(0).Rows(0)("CELL_PHONE").ToString
+                .ddlGender.Text = ds.Tables(0).Rows(0)("GENDER").ToString
+            End With
+        End If
     End Sub
 
     Protected Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim PatientID, FName, MidInitial, LName, DOB, HomePhone, CellPhone, Gender, Address, City, State, ZIP As String
+        Dim FName, MidInitial, LName, DOB, HomePhone, CellPhone, Gender, Address, City, State, ZIP As String
 
         Try
             FName = txtFName.Text.Trim
@@ -46,19 +52,19 @@ Partial Class UpdatePatient
 
             ' If one of the fields that allow nulls that has a Masked TextBox is empty, insert a blank instead of inserting a blank mask.
             ' A blank mask does not look nice in the DataBase. For example: A blank Home Phone will look like "(  )  -  "
-            If txtHPhone.Text = False Then
+            If txtHPhone.Text = String.Empty Then
                 HomePhone = ""
             End If
-            If txtCPhone.Text = False Then
+            If txtCPhone.Text = String.Empty Then
                 CellPhone = ""
             End If
-            If txtZip.Text = False Then
+            If txtZip.Text = String.Empty Then
                 ZIP = ""
             End If
             Try
                 Dim aPatient As New PatientDataTier
 
-                aPatient.UpdatePatient(PatientID, FName, MidInitial, LName, DOB, HomePhone, CellPhone, Gender, Address, City, State, ZIP)
+                aPatient.UpdatePatient(ViewState("PatID"), FName, MidInitial, LName, DOB, HomePhone, CellPhone, Gender, Address, City, State, ZIP)
 
                 'MessageBox.Show("Patient Info Updated", "Edit Patient Info", MessageBoxButtons.OK, MessageBoxIcon.None)
 
