@@ -27,14 +27,17 @@ Partial Class AddPerscription
                     .DataSource = ds2.Tables(0)
                     .DataTextField = "Physician_Name"
                     .DataValueField = "PHYS_ID"
-                    .DataBind()
+                    '.DataBind()
+                    '.Items.Insert(0, New ListItem("Please Select", 0))
+
                 End With
 
                 With Me.ddlMedication
                     .DataSource = ds3.Tables(0)
                     .DataTextField = "Medication"
                     .DataValueField = "RX_NO"
-                    .DataBind()
+                    '.DataBind()
+                    '.Items.Insert(0, New ListItem("Please Select", 0))
                 End With
 
 
@@ -43,6 +46,7 @@ Partial Class AddPerscription
                     .Items.Add("2x Daily")
                     .Items.Add("Every 4 Hours")
                     .Items.Add("Every 8 Hours")
+
                 End With
 
                 With Me.ddlIntake
@@ -50,6 +54,7 @@ Partial Class AddPerscription
                     .Items.Add("Suppository")
                     .Items.Add("Injection")
                     .Items.Add("IV")
+
                 End With
 
                 With Me.ddlDosage
@@ -64,7 +69,21 @@ Partial Class AddPerscription
                     .Items.Add("300mg")
                     .Items.Add("500mg")
                     .Items.Add("1000mg")
+
                 End With
+
+                If Not IsPostBack Then
+                    ddlDosage.Items.Insert(0, New ListItem("Please Select", 0))
+                    ddlFrequency.Items.Insert(0, New ListItem("Please Select", 0))
+                    ddlIntake.Items.Insert(0, New ListItem("Please Select", 0))
+                    ddlMedication.Items.Insert(0, New ListItem("Please Select", 0))
+                    ddlPhysician.Items.Insert(0, New ListItem("Please Select", 0))
+                    ddlMedication.DataBind()
+                    ddlPhysician.DataBind()
+                Else
+                    ddlMedication.Items.Insert(0, New ListItem("Please Select", 0))
+                    ddlPhysician.Items.Insert(0, New ListItem("Please Select", 0))
+                End If
             End If
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex.InnerException)
@@ -73,5 +92,29 @@ Partial Class AddPerscription
 
 
 
+    End Sub
+
+    Private Sub btnAddPrescription_Click(sender As Object, e As EventArgs) Handles btnAddPrescription.Click
+        Dim physID, patID As Int32
+        Dim rxNo, dosage, intake, freq, refill As String
+
+        Try
+            patID = Int32.Parse(ViewState("PatID"))
+            physID = Int32.Parse(ddlPhysician.SelectedValue)
+
+            rxNo = ddlMedication.SelectedValue.ToString()
+            dosage = ddlDosage.SelectedValue.ToString()
+            intake = ddlIntake.SelectedValue.ToString()
+            freq = ddlFrequency.SelectedValue.ToString()
+            refill = Int32.Parse(txtRefill.Text.Trim)
+
+            Dim aData As New AddDataTier
+
+            aData.AddPrescription(patID, physID, rxNo, dosage, intake, freq, refill)
+
+
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+        End Try
     End Sub
 End Class

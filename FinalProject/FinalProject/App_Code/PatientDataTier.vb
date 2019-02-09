@@ -37,6 +37,34 @@ Public Class PatientDataTier
         End Try
     End Function
 
+    Public Function GetPatient2(ByVal patID As Int32) As DataSet
+        Try
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "RetrievePatient2"
+                .Parameters.Add("@PATIENT_ID", SqlDbType.Int).Value = patID
+
+            End With
+
+
+            Dim aAdapter As New SqlClient.SqlDataAdapter
+            aAdapter.SelectCommand = cmdString
+            Dim aDataset As New DataSet
+            aAdapter.Fill(aDataset)
+
+            Return aDataset
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+        Finally
+            connString.Close()
+        End Try
+    End Function
+
     Public Function GetPrescription(ByVal PatID As Int32) As DataSet
         Try
             'open connection

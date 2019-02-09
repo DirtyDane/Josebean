@@ -145,12 +145,18 @@ Partial Class FindPatient
 
         recordToBeEdited = Trim(e.CommandArgument)
 
-        Dim sb As New StringBuilder
+
 
         Response.Redirect("AddPerscription.aspx?ID=" + recordToBeEdited.ToString, True)
     End Sub
 
 
+    Protected Sub ibtnEdit_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
+        Dim recordToBeEdited As String
 
+        recordToBeEdited = Trim(e.CommandArgument)
+
+        Response.Redirect("UpdatePatient.aspx?ID=" + recordToBeEdited.ToString, True)
+    End Sub
 
 End Class

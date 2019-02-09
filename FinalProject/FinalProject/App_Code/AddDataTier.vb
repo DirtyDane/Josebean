@@ -81,6 +81,39 @@ Public Class AddDataTier
         End Try
     End Function
 
+    Public Sub AddPrescription(ByVal patientID As Int32, ByVal physID As Int32, ByVal rxNo As String, ByVal dosage As String, ByVal intakeMethod As String, ByVal frequency As String, ByVal refill As Int32)
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "AddPrescription"
+                .Parameters.Add("@PATIENT_ID", SqlDbType.Int).Value = patientID
+                .Parameters.Add("@PHYS_ID", SqlDbType.Int).Value = physID
+                .Parameters.Add("@RX_NO", SqlDbType.VarChar, 10).Value = rxNo
+                .Parameters.Add("@DOSAGE", SqlDbType.VarChar, 6).Value = dosage
+                .Parameters.Add("@INTAKE_METHOD", SqlDbType.VarChar, 11).Value = intakeMethod
+                .Parameters.Add("@FREQUENCY", SqlDbType.VarChar, 25).Value = frequency
+                .Parameters.Add("@REFILL", SqlDbType.Int).Value = refill
+                'command
+
+
+                Dim aAdapter As New SqlClient.SqlDataAdapter
+
+                aAdapter.InsertCommand = cmdString
+
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+        Finally
+            connString.Close()
+        End Try
+    End Sub
+
     Public Function GetPatient(ByVal patID As Int32) As DataSet
         Try
             connString.Open()

@@ -79,7 +79,7 @@
                                 </td>
 
                                 <td>
-                                    <asp:ImageButton ID="ibtnEdit" runat="server" ImageUrl="~/Images/Edit2.jpg" Height="40px" Width="40px" ToolTip="Edit Patient's Personal Information" />
+                                    <asp:ImageButton ID="ibtnEdit" runat="server" ImageUrl="~/Images/Edit2.jpg" OnCommand="ibtnEdit_Click" CommandArgument='<%#Eval("PATIENT_ID") %>' Height="40px" Width="40px" ToolTip="Edit Patient's Personal Information" />
                                 </td>
 
                             </tr>
