@@ -8,7 +8,7 @@ Partial Class MasterPage
     Inherits System.Web.UI.MasterPage
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.PreRender
         If Session("PatID") IsNot Nothing Then
-            lblTest.Text = CType(Session("Role"), String)
+            'lblTest.Text = CType(Session("Role"), String)
             pnlSignIn.Visible = False
         End If
     End Sub

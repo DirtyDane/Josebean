@@ -30,7 +30,8 @@ Partial Class ViewPrescriptions
                 Cache.Add("Prescriptiondata", New DataView(ds.Tables(0)), Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
             End If
         Catch ex As Exception
-            Throw New ArgumentException(ex.Message, ex.InnerException)
+            Response.Redirect("ErrorPage.html")
+
         End Try
 
     End Sub
@@ -71,7 +72,7 @@ Partial Class ViewPrescriptions
             End With
 
         Catch ex As Exception
-
+            Response.Redirect("ErrorPage.html")
         End Try
 
     End Sub
@@ -88,18 +89,38 @@ Partial Class ViewPrescriptions
     'GridButtons
 
     Protected Sub ibtnRefill_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
-        'Dim presNO As Int32
-        'Dim refill As Int32
+        Dim presNO As Int32
+        Dim refill As Boolean
+        Try
+            presNO = Int32.Parse(Trim(e.CommandArgument))
 
-        'Try
-        '    Dim aPatient As New PatientDataTier
 
-        '    refill = gdvPrescriptions.
+            Dim aData As New PatientDataTier
 
-        '    presNO = gdvPrescriptions.SelectedRows(0).Cells(0).Value
-        'Catch ex As Exception
+            refill = aData.CheckRefill(presNO)
 
-        'End Try
+            If refill Then
+                aData.FillPrescription(presNO)
+                lblError.Text = ""
+            Else
+                lblError.Text = "There are no remaining refills for this prescription"
+            End If
 
+
+        Catch ex As Exception
+            Response.Redirect("ErrorPage.html")
+        End Try
+
+    End Sub
+
+
+    Protected Sub ibtnEdit_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
+        Dim recordToBeEdited As String
+
+        recordToBeEdited = Trim(e.CommandArgument)
+
+
+
+        Response.Redirect("UpdatePrescription.aspx?ID=" + recordToBeEdited.ToString, True)
     End Sub
 End Class

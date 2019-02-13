@@ -5,6 +5,7 @@ Partial Class Add_patient
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
     End Sub
+
     Protected Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Try
             With Me
@@ -24,9 +25,11 @@ Partial Class Add_patient
 
         End Try
     End Sub
+
     Protected Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Response.Redirect("FindPatient.aspx")
     End Sub
+
     Protected Sub btnAddPhysician_Click(sender As Object, e As EventArgs) Handles btnAddPhysician.Click
 
         Try

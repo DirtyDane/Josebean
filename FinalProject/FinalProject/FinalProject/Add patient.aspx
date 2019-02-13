@@ -4,7 +4,7 @@
 
 <asp:Content ID="Body" ContentPlaceHolderID="body" runat="server">
     
-        <table class="auto-style1">
+        <table class="auto-style1, Page">
             <tr>
                 <td class="auto-style9">&nbsp;</td>
                 <td class="auto-style13" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

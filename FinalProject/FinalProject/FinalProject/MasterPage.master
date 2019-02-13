@@ -47,7 +47,7 @@ li a:hover {
 .Login {
     background-color:whitesmoke;
     position:fixed;
-    right:0;
+   
     top:0;
     width:300px;
 }
@@ -60,7 +60,8 @@ li a:hover {
     </asp:ContentPlaceHolder>
     </head>
 <body>
-     <form id="form1" runat="server">
+     <form id="form1" runat="server" method="post">
+         <div class="Login">
          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
          
         
@@ -94,14 +95,14 @@ li a:hover {
                  <asp:Label ID="lblTest" runat="server" Text=""></asp:Label>
              </ContentTemplate>
          </asp:UpdatePanel>
-
+         </div>
          
         <div class="wrapper">
             <div class="menubar">
                 <ul>
-                    <li><a href="Default.aspx">Home</a></li>
-                    <li><a href="#">Patients</a></li>
-                    <li><a href="#">Physicians</a></li>
+                    <li><a href="FindPatient.aspx">Home</a></li>
+                    <li><a href="Add patient.aspx">Patients</a></li>
+                    <li><a href="AddPhysician.aspx">Physicians</a></li>
                     <li><a href="#">Prescriptions</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
