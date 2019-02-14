@@ -98,6 +98,38 @@ Public Class PatientDataTier
         End Try
     End Function
 
+    Public Function GetPrescription2(ByVal PresNo As Int32) As DataSet
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "RetrievePrescription2"
+                .Parameters.Add("@PRESCRIPTION_NO", SqlDbType.Int).Value = PresNo
+            End With
+            'command
+
+
+            Dim aAdapter As New SqlClient.SqlDataAdapter
+
+            aAdapter.SelectCommand = cmdString
+
+            Dim aDataSet As New DataSet
+
+
+            aAdapter.Fill(aDataSet)
+
+            Return aDataSet
+        Catch ex As Exception
+            Throw New ArgumentException(ex.Message, ex.InnerException)
+        Finally
+            connString.Close()
+        End Try
+    End Function
+
     Public Sub FillPrescription(ByVal presno As Int32)
         Try
             'open connection
@@ -169,8 +201,8 @@ Public Class PatientDataTier
     Public Function CheckRefill(ByVal presNO As Int32) As Boolean
         Dim patID As New DataSet
         Dim RefillAmt As Int32
-        Dim connString As New SqlClient.SqlConnection(ConnectionStrings("connString").ConnectionString)
-        Dim cmdString As New SqlClient.SqlCommand
+        'Dim connString As New SqlClient.SqlConnection(ConnectionStrings("connString").ConnectionString)
+        'Dim cmdString As New SqlClient.SqlCommand
         Try
             'open connection
             connString.Open()

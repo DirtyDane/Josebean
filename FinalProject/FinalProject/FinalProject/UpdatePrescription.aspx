@@ -7,15 +7,14 @@
              
                 <tr>
                     <td>
-                        <asp:Label ID="lblPrescript" runat="server" Text="Prescription No.:" Font-Bold="true"></asp:Label> &nbsp;
-                        <asp:TextBox ID="txtPrescriptNo" runat="server"></asp:TextBox>
-                    </td>  
+                        &nbsp;
+                        </td>  
                 </tr>
                
                 <tr>
                     <td>
                         <asp:Label ID="lblPatient" runat="server" Text="Patient Name:" Font-Bold="true"></asp:Label> &nbsp;
-                        <asp:TextBox ID="txtPatient" runat="server"></asp:TextBox> 
+                        <asp:Label ID="lblPatientName" runat="server" Text="" BorderStyle="Inset"></asp:Label> 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="lblDosage" runat="server" Text="Dosage:" Font-Bold="true"></asp:Label> &nbsp; 
                         <asp:DropDownList ID="ddlDosage" runat="server">
@@ -38,7 +37,9 @@
                 <tr>
                     <td>
                         <asp:Label ID="lblPhysician" runat="server" Text="Physician Name:" Font-Bold="true"></asp:Label> &nbsp;
-                        <asp:TextBox ID="txtPhysician" runat="server"></asp:TextBox>
+                        <asp:DropDownList ID="ddlPhysician" runat="server">
+                            <asp:ListItem Selected="True">Select Physician</asp:ListItem>
+                        </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="lblIntakeMethod" runat="server" Text="Intake Method:" Font-Bold="true"></asp:Label> &nbsp;
                         <asp:DropDownList ID="ddlIntakeMethod" runat="server">
