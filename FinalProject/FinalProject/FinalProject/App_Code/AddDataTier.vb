@@ -207,6 +207,46 @@ Public Class AddDataTier
             connString.Close()
         End Try
     End Function
+
+    Public Function UpdatePrescription(ByVal presNo As Int32, ByVal physID As Int32, ByVal rx As String, ByVal dosage As String, ByVal intake As String, ByVal freq As String, ByVal refill As String) As Boolean
+        Try
+            'open connection
+            connString.Open()
+            With cmdString
+                .Parameters.Clear()
+                .Connection = connString
+                .CommandType = CommandType.StoredProcedure
+                .CommandTimeout = 1500
+                .CommandText = "UpdatePrescription"
+                .Parameters.Add("@PRES_NO", SqlDbType.Int).Value = presNo
+                .Parameters.Add("@PHYS_ID", SqlDbType.Int).Value = physID
+                .Parameters.Add("@RX_NO", SqlDbType.VarChar, 10).Value = rx
+                .Parameters.Add("@DOSAGE", SqlDbType.VarChar, 6).Value = dosage
+                .Parameters.Add("@INTAKE_METHOD", SqlDbType.VarChar, 11).Value = intake
+                .Parameters.Add("@FREQUENCY", SqlDbType.VarChar, 25).Value = freq
+                .Parameters.Add("@REFILL", SqlDbType.Int).Value = refill
+                '.Parameters.Add("@REFILL_DATE", SqlDbType.Char, 1).Value = gender
+                '.Parameters.Add("@PAT_ADDRESS1", SqlDbType.VarChar, 60).Value = address
+                '.Parameters.Add("@PAT_CITY", SqlDbType.VarChar, 30).Value = city
+                '.Parameters.Add("@PAT_STATE", SqlDbType.Char, 2).Value = state
+                '.Parameters.Add("@PAT_ZIP", SqlDbType.VarChar, 9).Value = zip
+                'command
+
+                Dim aAdapter As New SqlClient.SqlDataAdapter
+
+                aAdapter.UpdateCommand = cmdString
+
+                .ExecuteNonQuery()
+
+                Return True
+            End With
+        Catch ex As Exception
+            'Throw New ArgumentException(ex.Message, ex.InnerException)
+            Return False
+        Finally
+            connString.Close()
+        End Try
+    End Function
 End Class
 
 

@@ -2,7 +2,8 @@
 
 
 <asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
-     <div>
+    <div class="Page">
+    <div class="pagemid">
             <h1 align="center"><u>Update Patient Information</u></h1>
 
             <table align="center">
@@ -17,8 +18,8 @@
                         <asp:RequiredFieldValidator ID="rfvGender" runat="server" ErrorMessage="*" ControlToValidate="ddlGender" ForeColor="Red"></asp:RequiredFieldValidator>
                         <asp:DropDownList ID="ddlGender" runat="server">
                             <asp:ListItem Selected="True">Select Gender</asp:ListItem>
-                            <asp:ListItem>Male</asp:ListItem>
-                            <asp:ListItem>Female</asp:ListItem>
+                            <asp:ListItem Value="M">Male</asp:ListItem>
+                            <asp:ListItem Value="F">Female</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -127,5 +128,7 @@
             <br />
             <br />
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+         <asp:Label ID="lblResult" runat="server" Text="" ForeColor="Red"></asp:Label>
         </div>
+        </div> 
 </asp:Content>

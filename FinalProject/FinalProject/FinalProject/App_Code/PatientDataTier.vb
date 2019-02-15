@@ -159,8 +159,8 @@ Public Class PatientDataTier
         End Try
     End Sub
 
-    Public Sub UpdatePatient(ByVal patientid As Int32, ByVal fname As String, ByVal mi As String, ByVal lname As String, ByVal dob As String, ByVal homephone As String, ByVal cellphone As String,
-                            ByVal gender As String, ByVal address As String, ByVal city As String, ByVal state As String, ByVal zip As String)
+    Public Function UpdatePatient(ByVal patientid As Int32, ByVal fname As String, ByVal mi As String, ByVal lname As String, ByVal dob As String, ByVal homephone As String, ByVal cellphone As String,
+                            ByVal gender As String, ByVal address As String, ByVal city As String, ByVal state As String, ByVal zip As String) As Boolean
         Try
             'open connection
             connString.Open()
@@ -189,14 +189,16 @@ Public Class PatientDataTier
                 aAdapter.UpdateCommand = cmdString
 
                 .ExecuteNonQuery()
+
+                Return True
             End With
         Catch ex As Exception
-            Throw New ArgumentException(ex.Message, ex.InnerException)
-
+            'Throw New ArgumentException(ex.Message, ex.InnerException)
+            Return False
         Finally
             connString.Close()
         End Try
-    End Sub
+    End Function
 
     Public Function CheckRefill(ByVal presNO As Int32) As Boolean
         Dim patID As New DataSet

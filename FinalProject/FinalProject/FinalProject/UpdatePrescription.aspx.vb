@@ -37,6 +37,7 @@ Partial Class UpdatePrescription
             ddlDosage.SelectedValue = ds.Tables(0).Rows(0)("Dosage")
             ddlFrequency.SelectedValue = ds.Tables(0).Rows(0)("Frequency")
             ddlIntakeMethod.SelectedValue = ds.Tables(0).Rows(0)("Intake Method")
+            txtRefills.Text = ds.Tables(0).Rows(0)("Refills")
         End If
     End Sub
 
@@ -46,7 +47,8 @@ Partial Class UpdatePrescription
 
     Protected Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim PrescriptNO, PatientName, PhysName, Refills, Medication, Dosage, Intake, Freq As String
-
+        Dim aData As New AddDataTier
+        Dim result As Boolean
         Try
             PrescriptNO = ViewState("Pres_No")
             PatientName = ViewState("PatID")
@@ -56,6 +58,14 @@ Partial Class UpdatePrescription
             Dosage = ddlDosage.SelectedValue.ToString()
             Intake = ddlIntakeMethod.SelectedValue.ToString()
             Freq = ddlFrequency.SelectedValue.ToString()
+
+            result = aData.UpdatePrescription(PrescriptNO, PhysName, Medication, Dosage, Intake, Freq, Refills)
+
+            If result Then
+                lblResult.Text = "Record Updated!"
+            Else
+                lblResult.Text = "Unable to Update Record!"
+            End If
         Catch ex As Exception
             Throw New ArgumentException(ex.Message, ex.InnerException)
         End Try

@@ -2,26 +2,27 @@
 
 
 <asp:Content ID="Body" ContentPlaceHolderID="body" runat="server">
-        <table class="auto-style40, Addpage">
+    <div class="auto-style47">  
+    <table class="auto-style43">
             <tr>
                 <td class="auto-style22">&nbsp;</td>
                 <td class="auto-style13" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lblAddPhysician" runat="server" Font-Bold="True" Text="Add Physician"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
+                <td class="auto-style44">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style23">
                     <asp:Label ID="lblFname" runat="server" Text="First Name"></asp:Label>
-                    &nbsp;<asp:RequiredFieldValidator ID="valFname" runat="server" ControlToValidate="txtFname" ErrorMessage="Must have First name." ForeColor="Red" Text="*"></asp:RequiredFieldValidator>
+                    &nbsp;<asp:RequiredFieldValidator ID="valFname" runat="server" ControlToValidate="txtFname" ErrorMessage="Must have First name." ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style25">
                     <asp:TextBox ID="txtFname" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style36">
                     <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
-                    &nbsp;<asp:RequiredFieldValidator ID="valGender" runat="server" BorderColor="Red" ControlToValidate="dprGender" ErrorMessage="Must Select Gender" ForeColor="Red" InitialValue="Gender" SetFocusOnError="True" Text="*"></asp:RequiredFieldValidator>
+                    &nbsp;<asp:RequiredFieldValidator ID="valGender" runat="server" BorderColor="Red" ControlToValidate="dprGender" ErrorMessage="Must Select Gender" ForeColor="Red" InitialValue="Gender" SetFocusOnError="True">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style38">
                     <asp:DropDownList ID="dprGender" runat="server" Height="22px" Width="126px">
@@ -30,7 +31,7 @@
                         <asp:ListItem>Female</asp:ListItem>
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style20"></td>
+                <td class="auto-style45"></td>
             </tr>
             <tr>
                 <td class="auto-style23">
@@ -45,7 +46,7 @@
                 <td class="auto-style38">
                     <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style20"></td>
+                <td class="auto-style45"></td>
             </tr>
             <tr>
                 <td class="auto-style23">
@@ -61,7 +62,7 @@
                 <td class="auto-style38">
                     <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style20"></td>
+                <td class="auto-style45"></td>
             </tr>
             <tr>
                 <td class="auto-style22">
@@ -128,7 +129,7 @@
                         <asp:ListItem Value="WY">Wyoming</asp:ListItem>
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1"></td>
+                <td class="auto-style44"></td>
             </tr>
             <tr>
                 <td class="auto-style22">
@@ -143,7 +144,7 @@
                 <td>
                     <asp:TextBox ID="txtZip" runat="server">_____</asp:TextBox>
                 </td>
-                <td class="auto-style19">&nbsp;</td>
+                <td class="auto-style44">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style23">
@@ -154,7 +155,7 @@
                 </td>
                 <td class="auto-style36"></td>
                 <td class="auto-style38"></td>
-                <td class="auto-style20"></td>
+                <td class="auto-style45"></td>
             </tr>
             <tr>
                 <td class="auto-style27"></td>
@@ -163,7 +164,7 @@
                     <asp:Button ID="btnClear" runat="server" BorderStyle="Ridge" Text="Clear" Width="100px" CausesValidation="False" />
                     <asp:Button ID="btnExit" runat="server" BorderStyle="Ridge" Text="Exit" Width="100px" CausesValidation="False" />
                 </td>
-                <td class="auto-style29"></td>
+                <td class="auto-style46"></td>
             </tr>
             <tr>
                 <td class="auto-style22">&nbsp;</td>
@@ -173,9 +174,10 @@
                 <td>
                     <asp:Label ID="lblSuccess" runat="server" Text="Success" Visible="False"></asp:Label>
                 </td>
-                <td class="auto-style19">&nbsp;</td>
+                <td class="auto-style44">&nbsp;</td>
             </tr>
         </table>
+        </div>  
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
@@ -200,10 +202,6 @@
         .auto-style28 {
             height: 30px;
         }
-        .auto-style29 {
-            width: 1px;
-            height: 30px;
-        }
         .auto-style36 {
             width: 119px;
             height: 26px;
@@ -214,8 +212,25 @@
         .auto-style38 {
             height: 26px;
         }
-        .auto-style40 {
-            width: 670px;
+        .auto-style43 {
+            width: 822px;
+        }
+        .auto-style44 {
+            width: 63px;
+        }
+        .auto-style45 {
+            width: 63px;
+            height: 26px;
+        }
+        .auto-style46 {
+            width: 63px;
+            height: 30px;
+        }
+        .auto-style47 {
+            background-color: whitesmoke;
+            height: auto;
+            width: 824px;
+            text-align: left;
         }
     </style>
 </asp:Content>

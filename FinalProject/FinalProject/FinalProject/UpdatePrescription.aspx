@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="UpdatePrescription.aspx.vb" Inherits="UpdatePrescription" MasterPageFile="~/MasterPage.master" StylesheetTheme="Theme1"%>
 
 <asp:Content ID="body" ContentPlaceHolderID="body" runat="server">
-    <div>
+    <div class="Page">
+    <div class="Pagemid">
  <h1 align="center"><u>Update Prescription Information</u></h1>
             <table align="center" style="height: 0px; width: 651px">
              
@@ -79,5 +80,8 @@
             <br />
             <asp:Button ID="btnUpdate" runat="server" Text="Update" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+            <br /><br />
+        <asp:Label ID="lblResult" runat="server" Text="" ForeColor="Red"></asp:Label>
+        </div>
         </div>
 </asp:Content>
